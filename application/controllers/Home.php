@@ -10,7 +10,7 @@ class Home extends CI_Controller {
 		$this->load->view('home');
 	}
 
-	public function edit() {
-		// edit page
+	public function view_page() {
+		//this is the view_page func
 	}
 }
