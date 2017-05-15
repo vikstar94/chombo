@@ -78,6 +78,14 @@ class CI_Controller {
 		$this->load =& load_class('Loader', 'core');
 		$this->load->initialize();
 		log_message('info', 'Controller Class Initialized');
+
+		// add the css, js and image path for every controller, so that they
+		// are available on every page
+		$this->data = array( 
+	         'css' => $this->config->item('css'), 
+	         'js' => $this->config->item('js'), 
+	         'image'=>$this->config->item('image') 
+	    ); 
 	}
 
 	// --------------------------------------------------------------------

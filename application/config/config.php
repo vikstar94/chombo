@@ -23,7 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = '';
+$config['base_url'] = 'http://localhost/chombo/';
 
 /*
 |--------------------------------------------------------------------------
@@ -521,3 +521,19 @@ $config['rewrite_short_tags'] = FALSE;
 | Array:		array('10.0.1.200', '192.168.5.0/24')
 */
 $config['proxy_ips'] = '';
+
+/*
+|--------------------------------------------------------------------------
+| Custom configurations
+|--------------------------------------------------------------------------
+|
+| If you need to set any custom onfigurations, you can add them bellow the 
+| comments and add description here:
+|
+| - css - the path to the css folder
+| - js - the path to the js folder
+| - images - the path to the images folder
+*/
+$config['css'] = 'includes/css/';
+$config['js'] = 'includes/js/';
+$config['image'] = 'includes/image/';

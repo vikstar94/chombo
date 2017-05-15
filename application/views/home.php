@@ -1,31 +1,4 @@
-<?php
-defined('BASEPATH') OR exit('No direct script access allowed');
-?>
-<!DOCTYPE html>
-<html lang="en-US">
-<head itemscope itemtype="http://schema.org/WebSite">
-	<meta charset="UTF-8">
-	<title>Gegnesis Theme: Change one widget background color</title>
-	<!-- main style -->
-	<link rel="stylesheet" href="css/style.css">
-	<!-- meta tags -->
-	<meta name="description" content="Example Description" />
-	<meta name="robots" content="noodp,noydir" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<meta itemprop="name" content="Assisted Living Home Care" />
-	<meta itemprop="url" content="http://www.theoaksonwoodville.com/" />
-	<!-- other styles -->
-	<style id='parallax-pro-theme-inline-css' type='text/css'>
-	.home-section-1 { background-image: url(http://www.theoaksonwoodville.com/wp-content/uploads/2015/10/The-Oaks-On-Woodville-Assisted-Living.png); }.home-section-3 { background-image: url(http://www.theoaksonwoodville.com/wp-content/uploads/2015/10/creek-and-old-growth-forest-larch-mountain.jpg); }.home-section-5 { background-image: url(http://www.theoaksonwoodville.com/wp-content/themes/parallax-pro/images/bg-5.jpg); }
-	</style>
-	<link rel='stylesheet' id='parallax-google-fonts-css'  href='//fonts.googleapis.com/css?family=Montserrat%7CSorts+Mill+Goudy&#038;ver=1.2' type='text/css' media='all' />
-	<!-- head scripts -->
-	<script type='text/javascript' src='js/jquery.js'></script>
-	<script type='text/javascript' src='js/jquery-migrate.min.js'></script>
-	<script type='text/javascript' src='js/responsive-menu.js'></script>
-	<script type='text/javascript' src='js/parallax.js'></script>
-	<style type="text/css">.site-title a { background: url(http://safootballer.com.au/wp-content/uploads/2014/08/your-logo-ehre.png) no-repeat !important; }</style>
-	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
 </head>
 
 <body class="home blog custom-header header-image full-width-content parallax-home" itemscope itemtype="http://schema.org/Blog">
@@ -131,19 +104,3 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			</main>
 		</div>
 	</div>
-
-	<footer class="site-footer" itemscope itemtype="http://schema.org/WPFooter"><div class="wrap"><p>Copyright &#x000A9;&nbsp;2015 &#x000B7; <a href="http://my.studiopress.com/themes/parallax/">Parallax Pro Theme</a> on <a href="http://www.studiopress.com/">Genesis Framework</a> &#x000B7; <a href="http://wordpress.org/">WordPress</a> &#x000B7; <a href="http://www.theoaksonwoodville.com/wp-login.php">Log in</a></p></div></footer>
-
-	</div> <!-- end of .site-container -->
-
-<!-- footer scripts -->
-<!-- 
-it is alrady included!
-TODO: must check
-<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script> -->
-<script src="js/index.js"></script>
-<!-- other sources -->
-<script type='text/javascript' src='http://www.theoaksonwoodville.com/wp-content/plugins/contact-form-7/includes/js/jquery.form.min.js?ver=3.51.0-2014.06.20'></script>
-<script type='text/javascript' src='http://www.theoaksonwoodville.com/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=4.3'></script>
-</body>
-</html>
