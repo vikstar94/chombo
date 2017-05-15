@@ -8,6 +8,9 @@ it is alrady included!
 TODO: must check
 <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script> -->
 <script type='text/javascript' src="<?php echo base_url($js . 'index.js'); ?>"></script>
+<!-- To add a custom js file to the footer for the current view just add:
+			$this->data('custom_js_foot') = array({list of items});
+		to the current method loading this view in the controller -->
 <?php if (!empty($custom_js_foot)) foreach ($custom_js_foot as $cjsh) { ?>
 	<script type='text/javascript' src='<?php echo base_url($js . $cjsf); ?>'></script>
 <?php } ?>
