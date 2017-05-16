@@ -533,7 +533,9 @@ $config['proxy_ips'] = '';
 | - css - the path to the css folder
 | - js - the path to the js folder
 | - images - the path to the images folder
+| - external - dir for files that are still in progress of integration
 */
 $config['css'] = 'includes/css/';
 $config['js'] = 'includes/js/';
 $config['image'] = 'includes/image/';
+$config['external'] = 'includes/external/';

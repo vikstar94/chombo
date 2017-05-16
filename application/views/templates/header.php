@@ -12,7 +12,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			$this->data('custom_css') = array({list of items});
 		to the current method loading this view in the controller -->
 	<?php if (!empty($custom_css)) foreach ($custom_css as $ccss) { ?>
-		<script type='text/javascript' src='<?php echo base_url($css . $ccss); ?>'></script>
+		<link rel="stylesheet" href="<?php echo base_url($css . $ccss); ?>">
 	<?php } ?>
 	<!-- meta tags -->
 	<meta name="description" content="Example Description" />
@@ -46,7 +46,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		<div class="wrap">
 			<div class="title-area">
 				<h1 class="site-title" itemprop="headline">
-					<a href="#">Home</a>
+					<a href="http://localhost/chombo/index.php">Home</a>
 				</h1>
 			</div>
 			<div class="widget-area header-widget-area">
@@ -54,7 +54,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					<div class="widget-wrap">
 						<nav class="nav-header" itemscope itemtype="http://schema.org/SiteNavigationElement">
 							<ul id="menu-primary-navigation" class="menu genesis-nav-menu">
-								<li id="menu-item-617" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-617"><a href="#" itemprop="url"><span itemprop="name">Home</span></a></li>
+								<li id="menu-item-617" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-617"><a href="http://localhost/chombo/index.php" itemprop="url"><span itemprop="name">Home</span></a></li>
 								<li id="menu-item-597" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-597">
 									<a href="#" itemprop="url"><span itemprop="name">Products</span></a>
 									<ul class="sub-menu">
@@ -71,7 +71,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 									</ul>
 								</li>
 								<li id="menu-item-598" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-598"><a href="#" itemprop="url"><span itemprop="name">Contact Us</span></a></li>
-								<li id="menu-item-616" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-616"><a href="#" itemprop="url"><span itemprop="name">Login / Register</span></a>
+								<li id="menu-item-616" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-616"><a href="http://localhost/chombo/index.php/users/login" itemprop="url"><span itemprop="name">Login</span></a>
 								</li>
 							</ul>
 						</nav>
