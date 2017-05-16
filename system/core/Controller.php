@@ -84,7 +84,8 @@ class CI_Controller {
 		$this->data = array( 
 	         'css' => $this->config->item('css'), 
 	         'js' => $this->config->item('js'), 
-	         'image'=>$this->config->item('image') 
+	         'image' => $this->config->item('image'),
+	         'external' => $this->config->item('external')
 	    ); 
 	}
 
