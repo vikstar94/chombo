@@ -3,7 +3,7 @@
 		<main class="content">
 			<div class="content_panel">
 				<div class="title">Sign In</div>
-				<form>
+				<form  action="http://localhost/chombo/index.php/users/login_do" method="POST" >
 				<input type="text" placeholder="Username" name="credentials[username]" />
 				<input type="password" placeholder="Password" name="credentials[password]"/>
 				<input type="checkbox" id="rememberMe" name="credentials[remember]"/>
