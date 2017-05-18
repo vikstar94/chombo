@@ -1806,6 +1806,7 @@ Site Footer
   background-color: #006837;
   padding: 40px 0;
   text-align: center;
+  clear: both;
 }
 
 .site-footer a,

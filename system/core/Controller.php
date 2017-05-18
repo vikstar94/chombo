@@ -81,12 +81,16 @@ class CI_Controller {
 
 		// add the css, js and image path for every controller, so that they
 		// are available on every page
-		$this->data = array( 
+
+	    $this->load->model('users_model');
+	    $this->load->library('session');
+	    $this->data['user_data'] = $this->users_model->user_data();
+		$this->data += array( 
 	         'css' => $this->config->item('css'), 
 	         'js' => $this->config->item('js'), 
 	         'image' => $this->config->item('image'),
 	         'external' => $this->config->item('external')
-	    ); 
+	    );
 	}
 
 	// --------------------------------------------------------------------

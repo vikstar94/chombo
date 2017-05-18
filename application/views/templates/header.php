@@ -5,7 +5,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <html lang="en-US">
 <head itemscope itemtype="http://schema.org/WebSite">
 	<meta charset="UTF-8">
-	<title>Gegnesis Theme: Change one widget background color</title>
+	<title>Chombos</title>
 	<!-- main style -->
 	<link rel="stylesheet" href="<?php echo base_url($css . 'style.css'); ?>">
 	<!-- To add a custom css file to the current view just add:
@@ -56,23 +56,29 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 							<ul id="menu-primary-navigation" class="menu genesis-nav-menu">
 								<li id="menu-item-617" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-617"><a href="http://localhost/chombo/index.php" itemprop="url"><span itemprop="name">Home</span></a></li>
 								<li id="menu-item-597" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-597">
-									<a href="#" itemprop="url"><span itemprop="name">Products</span></a>
-									<ul class="sub-menu">
-										<li id="menu-item-606" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-606"><a href="#" itemprop="url"><span itemprop="name">Product 1</span></a>
+									<a href="http://localhost/chombo/index.php/items" itemprop="url"><span itemprop="name">Store</span></a>
+									<!-- <ul class="sub-menu">
+										<li id="menu-item-606" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-606"><a href="#" itemprop="url"><span itemprop="name">Product 1</span></a> -->
 											<!-- <ul class="sub-menu">
 												<li id="menu-item-623" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-623"><a href="#" itemprop="url"><span itemprop="name">Content/Sidebar</span></a></li>
 												<li id="menu-item-622" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-622"><a href="#" itemprop="url"><span itemprop="name">Sidebar/Content</span></a></li>
 												<li id="menu-item-621" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-621"><a href="#" itemprop="url"><span itemprop="name">Full Width Content</span></a></li>
 											</ul> -->
-										</li>
+										<!-- </li>
 										<li id="menu-item-604" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-604"><a href="http://demo.studiopress.com/parallax/author/admin/" itemprop="url"><span itemprop="name">Product 2</span></a></li>
 										<li id="menu-item-620" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-620"><a href="#" itemprop="url"><span itemprop="name">Product 3</span></a></li>
 										<li id="menu-item-603" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-603"><a href="http://www.theoaksonwoodville.com/?cat=2" itemprop="url"><span itemprop="name">Product 4</span></a></li>
-									</ul>
+									</ul> -->
 								</li>
 								<li id="menu-item-598" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-598"><a href="#" itemprop="url"><span itemprop="name">Contact Us</span></a></li>
-								<li id="menu-item-616" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-616"><a href="http://localhost/chombo/index.php/users/login" itemprop="url"><span itemprop="name">Login</span></a>
-								</li>
+
+								<?php if (!empty($user_data)) { ?>
+									<li id="menu-item-616" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-616"><a href="http://localhost/chombo/index.php/users/profile/<?php echo $user_data->id; ?>" itemprop="url"><span itemprop="name"><?php echo "Hello, $user_data->first_name"; ?></span></a>
+									</li>
+								<?php } else { ?>
+									<li id="menu-item-616" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-616"><a href="http://localhost/chombo/index.php/users/login" itemprop="url"><span itemprop="name">Login</span></a>
+									</li>
+								<?php } ?>
 							</ul>
 						</nav>
 					</div>

@@ -6,20 +6,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 */
 class Users extends CI_Controller {
 
-	function __construct() {
-		parent::__construct();
-		$this->load->model('users_model');
-		$this->load->library('session');
-	}
-
 	public function login() {
-		var_dump($_SESSION);
+		// var_dump($_SESSION);
 		$this->data['custom_css'] = array('users/login_register.css');
 		$this->data['custom_js_foot'] = array('users/login_register.js');
 
 		$this->load->view('templates/header', $this->data);
-		$this->load->view('users/login', $this->data);
-		$this->load->view('templates/footer', $this->data);
+		$this->load->view('users/login');
+		$this->load->view('templates/footer');
 	}
 
 	public function login_do() {
@@ -36,8 +30,8 @@ class Users extends CI_Controller {
 		$this->data['custom_js_foot'] = array('users/login_register.js');
 
 		$this->load->view('templates/header', $this->data);
-		$this->load->view('users/register', $this->data);
-		$this->load->view('templates/footer', $this->data);
+		$this->load->view('users/register');
+		$this->load->view('templates/footer');
 	}
 
 	public function register_do() {
@@ -50,6 +44,15 @@ class Users extends CI_Controller {
 		}
 	}
 
+	public function profile($user_id) {
+		$this->data['user_data'] = $this->users_model->get_profile_data($user_id);
 
-	
+		$this->load->view('templates/header', $this->data);
+		$this->load->view('users/profile');
+		$this->load->view('templates/footer');
+	}
+
+	public function add_chombo() {
+		
+	}	
 }

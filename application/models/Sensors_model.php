@@ -1,9 +1,9 @@
 <?php
 
 /**
-* model class for Semsors table
+* model class for Sensors table
 */
-class Semsors_model extends CI_Model {
+class Sensors_model extends CI_Model {
 	
 	function __construct() {
 		$this->load->database();
