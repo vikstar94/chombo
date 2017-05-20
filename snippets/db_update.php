@@ -34,7 +34,6 @@ foreach ($files as $file) {
 
 	try {
 		$sql = "INSERT INTO `db_updates` (`file`, `updated_on`) VALUES (\"$file\",'".date('Y-m-d H:i:s')."')";
-		var_dump($sql);
 		$q = $db->prepare($sql);
 		$q->execute();
 	}
