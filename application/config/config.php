@@ -23,7 +23,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = 'http://localhost/chombo/';
+/*
+mozilla/5.0 (Linux; Android 4.4.2, Android SDK built for x86 BUILD/KK) AppleWebKit/537.36 (KHTML, Like Gecko) Version/4.0 Chrome/30.0.0.0 Mobile Safari/537.36
+ */
+
+$useragent = $_SERVER['HTTP_USER_AGENT'];
+if(preg_match('/(android)/i',substr($useragent,0))) {
+	$config['base_url'] = 'http://10.0.2.2/chombo/';
+} else
+{
+	$config['base_url'] = 'http://localhost/chombo/';
+}
 
 /*
 |--------------------------------------------------------------------------

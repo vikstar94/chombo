@@ -46,7 +46,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		<div class="wrap">
 			<div class="title-area">
 				<h1 class="site-title" itemprop="headline">
-					<a href="http://localhost/chombo/index.php">Home</a>
+					<a href="<?php echo base_url('/index.php'); ?>">Home</a>
 				</h1>
 			</div>
 			<div class="widget-area header-widget-area">
@@ -54,9 +54,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					<div class="widget-wrap">
 						<nav class="nav-header" itemscope itemtype="http://schema.org/SiteNavigationElement">
 							<ul id="menu-primary-navigation" class="menu genesis-nav-menu">
-								<li id="menu-item-617" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-617"><a href="http://localhost/chombo/index.php" itemprop="url"><span itemprop="name">Home</span></a></li>
+								<li id="menu-item-617" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-617"><a href="<?php echo base_url('/index.php'); ?>" itemprop="url"><span itemprop="name">Home</span></a></li>
 								<li id="menu-item-597" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-597">
-									<a href="http://localhost/chombo/index.php/items" itemprop="url"><span itemprop="name">Store</span></a>
+									<a href="<?php echo base_url('/index.php/items'); ?>" itemprop="url"><span itemprop="name">Store</span></a>
 									<!-- <ul class="sub-menu">
 										<li id="menu-item-606" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-606"><a href="#" itemprop="url"><span itemprop="name">Product 1</span></a> -->
 											<!-- <ul class="sub-menu">
@@ -70,13 +70,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 										<li id="menu-item-603" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-603"><a href="http://www.theoaksonwoodville.com/?cat=2" itemprop="url"><span itemprop="name">Product 4</span></a></li>
 									</ul> -->
 								</li>
-								<li id="menu-item-598" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-598"><a href="#" itemprop="url"><span itemprop="name">Contact Us</span></a></li>
+								<li id="menu-item-598" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-598"><a href="<?php echo base_url('/index.php/pages/contactus'); ?>" itemprop="url"><span itemprop="name">Contact Us</span></a></li>
 
 								<?php if (!empty($user_data)) { ?>
-									<li id="menu-item-616" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-616"><a href="http://localhost/chombo/index.php/users/profile/<?php echo $user_data->id; ?>" itemprop="url"><span itemprop="name"><?php echo "Hello, $user_data->first_name"; ?></span></a>
+									<li id="menu-item-616" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-616"><a href="<?php echo base_url('/index.php/users/profile/'.$user_data->id); ?>" itemprop="url"><span itemprop="name"><?php echo "Hello, $user_data->first_name"; ?></span></a>
 									</li>
 								<?php } else { ?>
-									<li id="menu-item-616" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-616"><a href="http://localhost/chombo/index.php/users/login" itemprop="url"><span itemprop="name">Login</span></a>
+									<li id="menu-item-616" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-616"><a href="<?php echo base_url('index.php/users/login'); ?>" itemprop="url"><span itemprop="name">Login</span></a>
 									</li>
 								<?php } ?>
 							</ul>
