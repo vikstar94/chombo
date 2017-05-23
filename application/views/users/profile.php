@@ -1,9 +1,9 @@
 <div>
 	<ul>
-		<li> First Name: </li>
-		<li> Last Name: </li>
-		<li> Username: </li>
-		<li> E-mail: </li>
+		<li> First Name: <?php echo $profile_data['first_name'];?> </li>
+		<li> Last Name: <?php echo $profile_data['last_name'];?> </li>
+		<li> Username: <?php echo $profile_data['username'];?> </li>
+		<li> E-mail: <?php echo $profile_data['email'];?></li>
 	</ul>
 	<div>
 		<div>

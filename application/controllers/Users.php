@@ -7,7 +7,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Users extends CI_Controller {
 
 	public function login() {
-		// var_dump($_SESSION);
 		$this->data['custom_css'] = array('users/login_register.css');
 		$this->data['custom_js_foot'] = array('users/login_register.js');
 
@@ -18,8 +17,9 @@ class Users extends CI_Controller {
 
 	public function login_do() {
 		$credentials = $_POST['credentials'];
-		if($this->users_model->login($credentials)){
-			header("Location: http://localhost/chombo/index.php");	
+		if($user_id = $this->users_model->login($credentials)){
+			$_SESSION['user'] = $user_id;
+			header("Location: http://localhost/chombo/index.php/users/profile/$user_id");	
 		} else {
 			header("Location: http://localhost/chombo/index.php/users/login");	
 		}
@@ -45,7 +45,7 @@ class Users extends CI_Controller {
 	}
 
 	public function profile($user_id) {
-		$this->data['user_data'] = $this->users_model->get_profile_data($user_id);
+		$this->data['profile_data'] = $this->users_model->get_profile_data($user_id);
 
 		$this->load->view('templates/header', $this->data);
 		$this->load->view('users/profile');
@@ -53,6 +53,12 @@ class Users extends CI_Controller {
 	}
 
 	public function add_chombo() {
-		
+		$code = $_POST['code'];
+		$user_id = $_SESSION['user'];
+		if ($this->users_model->add_chombo($code,$user_id)) {
+			header("Location: http://localhost/chombo/index.php/users/profile/$user_id");
+
+		}
+
 	}	
 }
