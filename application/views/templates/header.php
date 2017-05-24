@@ -2,11 +2,38 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
 <!DOCTYPE html>
-<html lang="en-US">
+<!--[if IE 8]> <html class="ie ie8" lang="en-US"> <![endif]-->
+<!--[if IE 9]>	<html class="ie ie9" lang="en-US"> <![endif]-->
+<!--[if gt IE 9]><!--> <html lang="en-US"><!--<![endif]-->
 <head itemscope itemtype="http://schema.org/WebSite">
 	<meta charset="UTF-8">
 	<title>Chombos</title>
-	<!-- main style -->
+	<!-- Set the viewport width to device width for mobile -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<!-- CSS -->
+
+	<link href="<?php echo base_url($css . 'bootstrap.min.css'); ?>" rel="stylesheet" type="text/css">
+    <link href="<?php echo base_url($css . 'font-awesome.min.css'); ?>" rel="stylesheet" type="text/css">
+    <!--[if IE 7]><link type="text/css" rel="stylesheet" href="<?php echo base_url($css . 'font-awesome-ie7.min.css'); ?>><![endif]-->
+    <link href="<?php echo base_url($css . 'font-entypo.css'); ?>" rel="stylesheet" type="text/css">
+    <link href="<?php echo base_url($css . 'fonts.css'); ?>"  rel="stylesheet" type="text/css">
+
+    <!-- Plugin CSS -->
+    <link href="<?php echo base_url($plugin . 'jquery-ui/jquery-ui.custom.min.css'); ?>" rel="stylesheet" type="text/css">    
+    <link href="<?php echo base_url($plugin . 'prettyPhoto-plugin/css/prettyPhoto.css'); ?>" rel="stylesheet" type="text/css">
+    <link href="<?php echo base_url($plugin . 'isotope/css/isotope.css'); ?>" rel="stylesheet" type="text/css">
+    <link href="<?php echo base_url($plugin . 'pnotify/css/jquery.pnotify.css'); ?>" media="screen" rel="stylesheet" type="text/css">    
+	<link href="<?php echo base_url($plugin . 'google-code-prettify/prettify.css'); ?>" rel="stylesheet" type="text/css"> 
+   
+    <link href="<?php echo base_url($plugin . 'mCustomScrollbar/jquery.mCustomScrollbar.css'); ?>" rel="stylesheet" type="text/css">
+    <link href="<?php echo base_url($plugin . 'tagsInput/jquery.tagsinput.css'); ?>" rel="stylesheet" type="text/css">
+    <link href="<?php echo base_url($plugin . 'bootstrap-switch/bootstrap-switch.css'); ?>" rel="stylesheet" type="text/css">    
+    <link href="<?php echo base_url($plugin . 'daterangepicker/daterangepicker-bs3.css'); ?>" rel="stylesheet" type="text/css">    
+    <link href="<?php echo base_url($plugin . 'bootstrap-timepicker/bootstrap-timepicker.min.css'); ?>" rel="stylesheet" type="text/css">
+    <link href="<?php echo base_url($plugin . 'colorpicker/css/colorpicker.css'); ?>" rel="stylesheet" type="text/css"> 
+
+    <!-- specific CSS -->
 	<link rel="stylesheet" href="<?php echo base_url($css . 'style.css'); ?>">
 	<!-- To add a custom css file to the current view just add:
 			$this->data('custom_css') = array({list of items});
@@ -14,19 +41,18 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<?php if (!empty($custom_css)) foreach ($custom_css as $ccss) { ?>
 		<link rel="stylesheet" href="<?php echo base_url($css . $ccss); ?>">
 	<?php } ?>
-	<!-- meta tags -->
-	<meta name="description" content="Example Description" />
-	<meta name="robots" content="noodp,noydir" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<meta itemprop="name" content="Assisted Living Home Care" />
-	<meta itemprop="url" content="http://www.theoaksonwoodville.com/" />
-	<!-- other styles -->
 	<style id='parallax-pro-theme-inline-css' type='text/css'>
 	.home-section-1 { background-image: url(http://www.theoaksonwoodville.com/wp-content/uploads/2015/10/The-Oaks-On-Woodville-Assisted-Living.png); }.home-section-3 { background-image: url(http://www.theoaksonwoodville.com/wp-content/uploads/2015/10/creek-and-old-growth-forest-larch-mountain.jpg); }.home-section-5 { background-image: url(http://www.theoaksonwoodville.com/wp-content/themes/parallax-pro/images/bg-5.jpg); }
 	</style>
 	<link rel='stylesheet' id='parallax-google-fonts-css'  href='//fonts.googleapis.com/css?family=Montserrat%7CSorts+Mill+Goudy&#038;ver=1.2' type='text/css' media='all' />
+
+	<!-- Responsive CSS -->
+    <link href="<?php echo base_url($css . 'theme-responsive.min.css'); ?>" rel="stylesheet" type="text/css"> 
+
 	<!-- head scripts -->
-	<script type='text/javascript' src="<?php echo base_url($js . 'jquery.js'); ?>"></script>
+	<script type="text/javascript" src="<?php echo base_url($js . 'modernizr.js'); ?>"></script> 
+    <script type="text/javascript" src="<?php echo base_url($js . 'mobile-detect.min.js'); ?>"></script> 
+    <script type="text/javascript" src="<?php echo base_url($js . 'mobile-detect-modernizr.js'); ?>"></script> 
 	<script type='text/javascript' src='<?php echo base_url($js . 'jquery-migrate.min.js'); ?>'></script>
 	<script type='text/javascript' src='<?php echo base_url($js . 'responsive-menu.js'); ?>'></script>
 	<!-- To add a custom js file to the header for the current view just add:
@@ -35,8 +61,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<?php if (!empty($custom_js_head)) foreach ($custom_js_head as $cjsh) { ?>
 		<script type='text/javascript' src='<?php echo base_url($js . $cjsh); ?>'></script>
 	<?php } ?>
-	<script type='text/javascript' src='<?php echo base_url($js . 'parallax.js'); ?>'></script>
 	<style type="text/css">.site-title a { background: url(http://safootballer.com.au/wp-content/uploads/2014/08/your-logo-ehre.png) no-repeat !important; }</style>
+	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script type="text/javascript" src="<?php echo base_url($js . 'html5shiv.js'); ?>"></script>
+      <script type="text/javascript" src="<?php echo base_url($js . 'respond.min.js'); ?>"></script>     
+    <![endif]-->
 	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 	</head>
 

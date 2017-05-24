@@ -549,3 +549,4 @@ $config['css'] = 'includes/css/';
 $config['js'] = 'includes/js/';
 $config['image'] = 'includes/image/';
 $config['external'] = 'includes/external/';
+$config['plugins'] = 'includes/plugins/';

@@ -60,6 +60,7 @@ class Users_model extends CI_Model {
 		$this->db->where('user_id',$user_id);
 		$query = $this->db->get('user_to_chombo');
 
+		$profile_data['chombos'] = array();
 		foreach ($query->result() as $u2c) {
 			$this->db->where('id', $u2c->chombo_id);
 			$chombo = $this->db->get('chombos')->row();
@@ -72,7 +73,7 @@ class Users_model extends CI_Model {
 				$this->db->where('owner',1);
 				$uid = $this->db->get('user_to_chombo')->row();
 
-				$this->db->select('first_name','last_name');
+				$this->db->select('first_name','last_name')->get_compiled_select();
 				$this->db->where('id',$uid->user_id);
 				$un = $this->db->get('users')->row();
 
@@ -80,6 +81,7 @@ class Users_model extends CI_Model {
 			}
 
 			$profile_data['chombos'][] = array(
+				'id' => $chombo->id,
 				'name' => $chombo->name,
 				'title' => $chombo->title,
 				'access_level' => $access_levels[$u2c->access_level_id],

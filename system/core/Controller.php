@@ -89,7 +89,8 @@ class CI_Controller {
 	         'css' => $this->config->item('css'), 
 	         'js' => $this->config->item('js'), 
 	         'image' => $this->config->item('image'),
-	         'external' => $this->config->item('external')
+	         'external' => $this->config->item('external'),
+	         'plugin' => $this->config->item('plugins')
 	    );
 	}
 

@@ -728,6 +728,10 @@ Structure and Layout
 /* Site Containers
 --------------------------------------------- */
 
+.spacer {
+  margin-top: 20px;
+}
+
 .site-inner,
 .wrap {
   margin: 0 auto;
