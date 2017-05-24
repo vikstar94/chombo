@@ -1,6 +1,6 @@
+
 	<footer class="site-footer" itemscope itemtype="http://schema.org/WPFooter"><div class="wrap"><p>Copyright &#x000A9;&nbsp;2015 &#x000B7; <a href="http://my.studiopress.com/themes/parallax/">Parallax Pro Theme</a> on <a href="http://www.studiopress.com/">Genesis Framework</a> &#x000B7; <a href="http://wordpress.org/">WordPress</a> &#x000B7; <a href="http://www.theoaksonwoodville.com/wp-login.php">Log in</a></p></div></footer>
 
-	<a id="back-top" href="#" data-action="backtop" class="vd_back-top visible"> <i class="fa  fa-angle-up"> </i> </a>
 
 
 	</div> <!-- end of .site-container -->

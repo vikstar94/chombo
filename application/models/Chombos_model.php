@@ -23,9 +23,7 @@ class Chombos_model extends CI_Model {
 			$chombo_data['actuators'][] = $actuator;
 
 		}
-		
-		var_dump($chombo_data);
-		die();
+
 		return $chombo_data;
 	}
 }

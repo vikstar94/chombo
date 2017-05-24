@@ -28,6 +28,11 @@
 											</tbody>
 											</table>
 										</div>
+										<?php if ($user_data->id === $profile_data['id']) { ?>
+										<div class="row">
+											<div class="col-xs-12"><a class="btn btn-block" href="<?php echo base_url('index.php/users/logout'); ?>">Log Out</a></div>
+										</div>
+										<?php } ?>
 									</div>
 								</div>
 								<!-- panel widget -->
@@ -88,8 +93,10 @@
 															<th>Title</th>
 															<th>Access Level</th>
 															<th>Status</th>
-															<th>Owner</th>                                       
-															<th>Actions</th>                                       
+															<th>Owner</th>
+															<?php if ($user_data->id === $profile_data['id']) { ?>                               
+															<th>Actions</th>
+															<?php } ?>                                       
 														</tr>
 													</thead>   
 													<tbody>
@@ -98,26 +105,28 @@
 														<tr>
 															<td><?php echo ++$i; ?></td>
 															<td class="center">
-																<a href="<?php echo base_url('chombos/view/' . $chombo['id']); ?>">
+																<a href="<?php echo base_url('index.php/chombos/view/' . $chombo['id']); ?>">
 																	<?php echo $chombo['name']; ?>
 																</a></td> 
 															<td class="center"><?php echo $chombo['title']; ?></td>
 															<td class="center"><?php echo $chombo['access_level']; ?></td>
 															<td class="center"><?php echo $chombo['status']; ?></td>
 															<td class="center"><?php echo $chombo['owner']; ?></td>
+															<?php if ($user_data->id === $profile_data['id']) { ?>
 															<td class="menu-action rounded-btn">
-                              	<a class="btn menu-icon vd_bg-green" data-placement="top" data-toggle="tooltip" data-original-title="view">
-                                     <i class="fa fa-eye"></i>
-                                  </a>                                      
-                              	<?php if ($chombo['owner'] == 'You') { ?>
-                              	<a class="btn menu-icon vd_bg-yellow" data-placement="top" data-toggle="tooltip" data-original-title="edit">
-                                     <i class="fa fa-pencil"></i>
-                                  </a>
-                                  <?php } ?>
-                              	<a class="btn menu-icon vd_bg-red" data-placement="top" data-toggle="tooltip" data-original-title="delete">
-                                     <i class="fa fa-times"></i>
-                                  </a>                 
+																<a class="btn menu-icon vd_bg-green" data-placement="top" data-toggle="tooltip" data-original-title="view">
+																		 <i class="fa fa-eye"></i>
+																	</a>                                      
+																<?php if ($chombo['owner'] == 'You') { ?>
+																<a class="btn menu-icon vd_bg-yellow" data-placement="top" data-toggle="tooltip" data-original-title="edit">
+																		 <i class="fa fa-pencil"></i>
+																	</a>
+																	<?php } ?>
+																<a class="btn menu-icon vd_bg-red" data-placement="top" data-toggle="tooltip" data-original-title="delete">
+																		 <i class="fa fa-times"></i>
+																	</a>                 
 															</td>
+															<?php } ?>
 														</tr>
 														<?php } // end of foreach
 														} else { // no chombos? ?>
@@ -133,7 +142,7 @@
 										</div>
 									</div><!-- tab-content -->
 								</div><!-- tabs-widget -->
-            	</div>
+							</div>
 						</div><!-- row --> 
 					</div><!-- .vd_content-section --> 
 				</div><!-- .vd_content --> 

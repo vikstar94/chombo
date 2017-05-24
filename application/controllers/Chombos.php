@@ -16,7 +16,7 @@ class Chombos extends CI_Controller
 		$this->data['chombo_data'] = $this->chombos_model->chombo_data($chombo_id);
 
 		$this->load->view('templates/header', $this->data);
-		$this->load->view('users/profile');
+		$this->load->view('chombos/view');
 		$this->load->view('templates/footer');	
 	}
 }

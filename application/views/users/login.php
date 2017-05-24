@@ -8,7 +8,7 @@
 				<input type="password" placeholder="Password" name="credentials[password]"/>
 				<input type="checkbox" id="rememberMe" name="credentials[remember]"/>
 				<label for="rememberMe"> <span> remember me</span></label>
-				<button type="submit">Create Account</button>
+				<button type="submit">Login</button>
 				</form>
 				<div class="social"> <span>or sign up with social media</span></div>
 				<div class="buttons">
