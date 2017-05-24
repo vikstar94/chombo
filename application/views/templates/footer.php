@@ -1,13 +1,35 @@
+
 	<footer class="site-footer" itemscope itemtype="http://schema.org/WPFooter"><div class="wrap"><p>Copyright &#x000A9;&nbsp;2015 &#x000B7; <a href="http://my.studiopress.com/themes/parallax/">Parallax Pro Theme</a> on <a href="http://www.studiopress.com/">Genesis Framework</a> &#x000B7; <a href="http://wordpress.org/">WordPress</a> &#x000B7; <a href="http://www.theoaksonwoodville.com/wp-login.php">Log in</a></p></div></footer>
+
+
 
 	</div> <!-- end of .site-container -->
 
 <!-- footer scripts -->
-<!-- 
-it is alrady included!
-TODO: must check
-<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script> -->
-<script type='text/javascript' src="<?php echo base_url($js . 'index.js'); ?>"></script>
+<!-- Placed at the end of the document so the pages load faster --> 
+<script type="text/javascript" src="<?php echo base_url($js . 'jquery.js'); ?>"></script> 
+<!--[if lt IE 9]>
+  <script type="text/javascript" src="<?php echo base_url($js . 'excanvas.js'); ?>"></script>      
+<![endif]-->
+<script type="text/javascript" src="<?php echo base_url($js . 'bootstrap.min.js'); ?>"></script> 
+<script type="text/javascript" src='<?php echo base_url($plugin . 'jquery-ui/jquery-ui.custom.min.js'); ?>'></script>
+<script type="text/javascript" src="<?php echo base_url($plugin . 'jquery-ui-touch-punch/jquery.ui.touch-punch.min.js'); ?>"></script>
+
+<script type="text/javascript" src="<?php echo base_url($js . 'caroufredsel.js'); ?>"></script> 
+<script type="text/javascript" src="<?php echo base_url($js . 'plugins.js'); ?>"></script>
+
+<script type="text/javascript" src="<?php echo base_url($plugin . 'breakpoints/breakpoints.js'); ?>"></script>
+<script type="text/javascript" src="<?php echo base_url($plugin . 'dataTables/jquery.dataTables.min.js'); ?>"></script>
+<script type="text/javascript" src="<?php echo base_url($plugin . 'prettyPhoto-plugin/js/jquery.prettyPhoto.js'); ?>"></script> 
+
+<script type="text/javascript" src="<?php echo base_url($plugin . 'mCustomScrollbar/jquery.mCustomScrollbar.concat.min.js'); ?>"></script>
+<script type="text/javascript" src="<?php echo base_url($plugin . 'tagsInput/jquery.tagsinput.min.js'); ?>"></script>
+<script type="text/javascript" src="<?php echo base_url($plugin . 'bootstrap-switch/bootstrap-switch.min.js'); ?>"></script>
+<script type="text/javascript" src="<?php echo base_url($plugin . 'blockUI/jquery.blockUI.js'); ?>"></script>
+<script type="text/javascript" src="<?php echo base_url($plugin . 'pnotify/js/jquery.pnotify.min.j'); ?>s"></script>
+
+<script type="text/javascript" src="<?php echo base_url($js . 'theme.js'); ?>"></script>
+
 <!-- To add a custom js file to the footer for the current view just add:
 			$this->data('custom_js_foot') = array({list of items});
 		to the current method loading this view in the controller -->

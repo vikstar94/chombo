@@ -432,6 +432,13 @@ blockquote::before {
   position: relative;
   top: -10px;
 }
+
+label {
+  display: inline;
+  max-width: 100%;
+  margin-bottom: 5px;
+  font-weight: 700;
+}
 /* Headings
 --------------------------------------------- */
 
@@ -727,6 +734,10 @@ Structure and Layout
 ---------------------------------------------------------------------------------------------------- */
 /* Site Containers
 --------------------------------------------- */
+
+.spacer {
+  margin-top: 20px;
+}
 
 .site-inner,
 .wrap {

@@ -21,9 +21,6 @@
 			</div>
 			<div class="product_info">
 				<h1>Chombo For the Home</h1>
-				<div class="rating">
-					<i class="fa fa-star fa-3x"></i><i class="fa fa-star fa-3x"></i><i class="fa fa-star fa-3x"></i><i class="fa fa-star-half-o fa-3x"></i><i class="fa fa-star-o fa-3x"></i>
-				</div>
 				<div class="product_description">
 					<p>Oh yes sir. Well, they're your parents, you must know them. What are their common interests, what do they like to do together? You're George McFly. Nothing, nothing, nothing, look tell her destiny has brought you together, tell her that she's the most beautiful you have ever seen. Girls like that stuff. What, what are you doing George? Lorraine, are you up there?</p>
 				</div>
@@ -59,7 +56,7 @@
 							<input type="text">
 						</div>
 						<div class="cart">
-							<a href="http://localhost/chombo/index.php/items/purchase" class="add">Buy Now <i class="fa fa-shopping-cart fa-lg"></i></a>
+							<a href="http://localhost/chombo/index.php/items/purchase" class="add">Buy Now</a>
 						</div>
 					</div>
 				</div>

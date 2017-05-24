@@ -23,6 +23,7 @@ class Users_model extends CI_Model {
 		$this->db->where("username", $input['username']);
 		$query = $this->db->get("users");
 		$row = $query->row();
+
 		if (!empty($row)) {
 			$pass = $input['password'] . $row->salt;
 			if ($row->password == hash("sha256", $pass)) {
@@ -36,35 +37,32 @@ class Users_model extends CI_Model {
 		return false;
 	} 
 
-	public function logout() {
-		$this->db->where("id", $_SESSION['user']);
-		$query = $this->db->update("users", array('active' => 0));
-		unset($_SESSION['user']);
-		return true;
+	public function logout($user_id) {
+		$this->db->where("id", $user_id);
+		$this->db->update("users", array('active' => 0));
 	}
 
-	public function get_profile_data($user_id) {
+	public function get_profile_data($user_id, $viewer) {
 		$this->db->where('id', $user_id);
 		$query = $this->db->get('users');
 		$profile_data = $query->row_array();
 
 		if (empty($profile_data)) return false;
 		
-
 		$query = $this->db->get('access_levels');
 		foreach ($query->result() as $al) {
 			$access_levels[$al->id] = $al->name;
-
 		}
 
 		$this->db->where('user_id',$user_id);
 		$query = $this->db->get('user_to_chombo');
 
+		$profile_data['chombos'] = array();
 		foreach ($query->result() as $u2c) {
 			$this->db->where('id', $u2c->chombo_id);
 			$chombo = $this->db->get('chombos')->row();
 
-			if ($u2c->owner == 1) {
+			if ($u2c->owner == 1 && $user_id == $viewer) {
 				$owner = 'You';
 			} else {
 				$this->db->select('user_id');
@@ -72,7 +70,7 @@ class Users_model extends CI_Model {
 				$this->db->where('owner',1);
 				$uid = $this->db->get('user_to_chombo')->row();
 
-				$this->db->select('first_name','last_name');
+				$this->db->select('first_name','last_name')->get_compiled_select();
 				$this->db->where('id',$uid->user_id);
 				$un = $this->db->get('users')->row();
 
@@ -80,6 +78,7 @@ class Users_model extends CI_Model {
 			}
 
 			$profile_data['chombos'][] = array(
+				'id' => $chombo->id,
 				'name' => $chombo->name,
 				'title' => $chombo->title,
 				'access_level' => $access_levels[$u2c->access_level_id],
@@ -124,7 +123,7 @@ class Users_model extends CI_Model {
 
 	//TODO:it have to be in separate helper class
 	private function generate_code($length) {
-		$characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!@.?_/-=#*^';
+		$characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
 		$charactersLength = strlen($characters);
 		$randomString = '';
 		for ($i = 0; $i < $length; $i++) {
