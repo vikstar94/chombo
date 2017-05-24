@@ -83,7 +83,7 @@
 										</div><!-- home-tab -->
 										<div id="chombos-tab" class="tab-pane">
 											<div class="pd-20">
-												<div class="vd_info tr"><a class="btn vd_btn btn-xs vd_bg-yellow"> <i class="fa fa-plus append-icon"></i> Add Chombo </a> </div>         
+												<div class="vd_info tr"><a href="<?php echo base_url('index.php/users/add_chombo'); ?>" class="btn vd_btn btn-xs vd_bg-yellow"> <i class="fa fa-plus append-icon"></i> Register New Chombo </a> </div>         
 												<h3 class="mgbt-xs-15 mgtp-10 font-semibold"><i class="fa fa-bolt mgr-10 profile-icon"></i> CHOMBOS</h3>        
 												<table class="table table-bordered table-hover">
 													<thead>
