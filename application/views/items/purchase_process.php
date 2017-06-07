@@ -15,7 +15,8 @@
 		<h3 class="panel-title"> <span class="menu-icon"> <i class="fa fa-magic"></i> </span> Select Custom Products </h3>
 	</div>
 	<div id="wizard-1" class="panel-body vd_custom-product form-wizard">
-	<form class="form-horizontal" action="#" role="form" name="chombo_list" id="chombo_form">
+	<form class="form-horizontal" action="<?php echo base_url('index.php/items/purchase'); ?>" role="form" name="chombo_list" id="chombo_form" method="POST">
+	<input type="hidden" name="item_id" value="<?php echo $item_id; ?>" />
 	<ul class="nav nav-pills nav-justified">
 		<li><a href="#tab1" data-toggle="tab">
 		<div class="menu-icon"> 1 </div>
@@ -36,301 +37,28 @@
 	</div>
 	<div class="tab-content no-bd">
 	<div id="tab1" class="tab-pane">
-	<div class="form-group content-list">
-	<div class="menu-icon"> <i class="glyphicon glyphicon-globe"></i> </div>
-	<div class="menu-text">
-	<h3>Datacenter</h3>
-	<div class="radio">
-	<label>
-	<input name="optionsRadios1" id="optionsRadios1" value="option1" checked="" type="radio">
-	Los Angeles </label>
-	</div>
-	<div class="radio">
-	<label>
-	<input name="optionsRadios1" id="optionsRadios2" value="option2" type="radio">
-	Chicago </label>
-	</div>
-	</div>
-	</div>
-	<div class="form-group content-list">
-	<div class="menu-icon"> <i class="fa fa-cogs"></i> </div>
-	<div class="menu-text">
-	<h3>Processor</h3>
-	<div class="radio">
-	<label>
-	<input name="optionsRadios2" id="optionsRadios3" value="option1" checked="" type="radio">
-	AMD Athlon II X4 631 Quad-Core <span class="badge vd_bg-red">NEW</span> </label>
-	</div>
-	<div class="radio">
-	<label>
-	<input name="optionsRadios2" id="optionsRadios4" value="option2" type="radio">
-	Intel Core i7 980 @ 3.33GHz </label>
-	</div>
-	<div class="radio">
-	<label>
-	<input name="optionsRadios2" id="optionsRadios5" value="option2" type="radio">
-	Intel Core i7-3920XM @ 2.90GHz </label>
-	</div>
-	<div class="radio">
-	<label>
-	<input name="optionsRadios2" id="optionsRadios6" value="option2" type="radio">
-	Intel Core2 Duo E6700 @ 2.66GHz </label>
-	</div>
-	</div>
-	</div>
-	<div class="form-group content-list">
-	<div class="menu-icon"> <i class="glyphicon glyphicon-hdd"></i> </div>
-	<div class="menu-text">
-	<h3>Hard Drive</h3>
-	<p class="help-inline">You can choose up to two hard drive. Lorem ipsum doler sit amet lone torenim gonsolas midake gracias ono corazon.<br />
-	<br />
-	</p>
-	<h5>Hard Drive 1</h5>
-	<div class="radio">
-	<label>
-	<input name="optionsRadios3" id="optionsRadios7" value="option1" checked="" type="radio">
-	500 GB SATA (7200 RPM) </label>
-	</div>
-	<div class="radio">
-	<label>
-	<input name="optionsRadios3" id="optionsRadios8" value="option2" type="radio">
-	1 TB SATA Drive (7200 RPM) <span class="vd_red">[Add $15.00] </span> </label>
-	</div>
-	<div class="radio">
-	<label>
-	<input name="optionsRadios3" id="optionsRadios9" value="option2" type="radio">
-	3 TB SATA Drive (7200 RPM) <span class="vd_red">[Add $25.00] </span> </label>
-	</div>
-	<div class="radio">
-	<label>
-	<input name="optionsRadios3" id="optionsRadios10" value="option2" type="radio">
-	4 TB SATA Drive (7200 RPM) <span class="vd_red">[Add $35.00]</span> </label>
-	</div>
-	<br/>
-	<br/>
-	<h5>Hard Drive 2</h5>
-	<div class="radio">
-	<label>
-	<input name="optionsRadios4" id="optionsRadios11" value="option1" checked="" type="radio">
-	500 GB SATA (7200 RPM) </label>
-	</div>
-	<div class="radio">
-	<label>
-	<input name="optionsRadios4" id="optionsRadios12" value="option2" type="radio">
-	1 TB SATA Drive (7200 RPM) <span class="vd_red">[Add $15.00] </span> <span class="badge vd_bg-red">HOT</span> </label>
-	</div>
-	<div class="radio">
-	<label>
-	<input name="optionsRadios4" id="optionsRadios13" value="option2" type="radio">
-	3 TB SATA Drive (7200 RPM) <span class="vd_red">[Add $25.00] </span> </label>
-	</div>
-	<div class="radio">
-	<label>
-	<input name="optionsRadios4" id="optionsRadios14" value="option2" type="radio">
-	4 TB SATA Drive (7200 RPM) <span class="vd_red">[Add $35.00]</span> </label>
-	</div>
-	</div>
-	</div>
-	<div class="form-group content-list">
-	<div class="menu-icon"> <i class="glyphicon glyphicon-inbox"></i> </div>
-	<div class="menu-text">
-	<h3>RAM</h3>
-	<p class="help-inline">You can choose only one RAM. Lorem ipsum doler sit amet lone torenim gonsolas midake gracias ono corazon.</p>
-	<div class="radio">
-	<label>
-	<input name="optionsRadios5" id="optionsRadios15" value="option1" checked="" type="radio">
-	8 GB DDR3 1333MHZ ECC </label>
-	</div>
-	<div class="radio">
-	<label>
-	<input name="optionsRadios5" id="optionsRadios16" value="option2" type="radio">
-	16 GB DDR3 1333MHZ ECC <span class="vd_red">[Add $20.00]</span> </label>
-	</div>
-	<div class="radio">
-	<label>
-	<input name="optionsRadios5" id="optionsRadios17" value="option2" type="radio">
-	24 GB DDR3 1333MHZ ECC <span class="vd_red">[Add $40.00]</span> </label>
-	</div>
-	<div class="radio">
-	<label>
-	<input name="optionsRadios5" id="optionsRadios18" value="option2" type="radio">
-	32 GB DDR3 1333MHZ ECC <span class="vd_red">[Add $80.00] </span> </label>
-	</div>
-	</div>
-	</div>
-	<div class="form-group content-list">
-	<div class="menu-icon"> <i class="fa fa-dashboard"></i> </div>
-	<div class="menu-text">
-	<h3>Bandwidth</h3>
-	<div class="radio">
-	<label>
-	<input name="optionsRadios6" id="optionsRadios19" value="option1" checked="" type="radio">
-	10 TB Bandwidth </label>
-	</div>
-	<div class="radio">
-	<label>
-	<input name="optionsRadios6" id="optionsRadios20" value="option2" type="radio">
-	11 TB Bandwidth <span class="vd_red">[Add $10.00]</span> </label>
-	</div>
-	<div class="radio">
-	<label>
-	<input name="optionsRadios6" id="optionsRadios21" value="option2" type="radio">
-	12 TB Bandwidth <span class="vd_red">[Add $11.00] </span> </label>
-	</div>
-	<div class="radio">
-	<label>
-	<input name="optionsRadios6" id="optionsRadios22" value="option2" type="radio">
-	13 TB Bandwidth <span class="vd_red">[Add $12.00] </span> </label>
-	</div>
-	<div class="radio">
-	<label>
-	<input name="optionsRadios6" id="optionsRadios23" value="option2" type="radio">
-	14 TB Bandwidth <span class="vd_red">[Add $13.00] </span> </label>
-	</div>
-	<div class="radio">
-	<label>
-	<input name="optionsRadios6" id="optionsRadios24" value="option2" type="radio">
-	15 TB Bandwidth <span class="vd_red">[Add $14.00] </span> </label>
-	</div>
-	<div class="radio">
-	<label>
-	<input name="optionsRadios6" id="optionsRadios25" value="option2" type="radio">
-	16 TB Bandwidth <span class="vd_red">[Add $15.00] </span> </label>
-	</div>
-	</div>
-	</div>
+		<div class="menu-text">
+		<?php foreach ($parts['sensors'] as $sensor) { ?>
+			<div class="checkbox">
+				<label>
+					<input name="sensors[]" value="<?php echo $sensor['id']; ?>" type="checkbox">
+				<?php echo $sensor['model']; ?></label>
+			</div>
+		<?php } ?>
+		</div>
 	</div>
 	<!-- #tab-1 -->
 	<div id="tab2" class="tab-pane">
-	<div class="form-group content-list">
-	<div class="menu-icon"> <i class="fa fa-linux"></i> </div>
-	<div class="menu-text">
-	<h3>Operating System</h3>
-	<p class="help-inline">Please select your operating systems below:</p>
-	<h5><strong>Linux</strong></h5>
-	<div class="radio">
-	<label>
-	<input name="optionsRadios7" id="optionsRadios26" value="option1" checked="" type="radio">
-	Cent OS 5.8 </label>
-	</div>
-	<div class="radio">
-	<label>
-	<input name="optionsRadios7" id="optionsRadios27" value="option2" type="radio">
-	Cent OS 6.2 </label>
-	</div>
-	<div class="radio">
-	<label>
-	<input name="optionsRadios7" id="optionsRadios28" value="option2" type="radio">
-	Ubuntu Server 8.04 </label>
-	</div>
-	<div class="radio">
-	<label>
-	<input name="optionsRadios7" id="optionsRadios29" value="option2" type="radio">
-	Ubuntu Server 11.10 </label>
-	</div>
-	<div class="radio">
-	<label>
-	<input name="optionsRadios7" id="optionsRadios30" value="option2" type="radio">
-	Debian 6 (Squeeze) </label>
-	</div>
-	<div class="radio">
-	<label>
-	<input name="optionsRadios7" id="optionsRadios31" value="option2" type="radio">
-	Open SUSE Linux 11.1 </label>
-	</div>
-	<div class="radio">
-	<label>
-	<input name="optionsRadios7" id="optionsRadios32" value="option2" type="radio">
-	Ubuntu Server 10.04 </label>
-	</div>
-	<div class="radio">
-	<label>
-	<input name="optionsRadios7" id="optionsRadios33" value="option2" type="radio">
-	Debian 5 (Lenny) </label>
-	</div>
-	<div class="radio">
-	<label>
-	<input name="optionsRadios7" id="optionsRadios34" value="option2" type="radio">
-	Open SUSE Linux 12.1 </label>
-	</div>
-	<div class="radio">
-	<label>
-	<input name="optionsRadios7" id="optionsRadios35" value="option2" type="radio">
-	Red Hat Enterprise Linux 5.6 <span class="vd_red">[Add $30.00] </span> </label>
-	</div>
-	<div class="radio">
-	<label>
-	<input name="optionsRadios7" id="optionsRadios36" value="option2" type="radio">
-	Red Hat Enterprise Linux 6.2 <span class="vd_red">[Add $30.00]</span> </label>
-	</div>
-	</div>
-	<div class="menu-icon"> <i class="fa fa-windows"></i> </div>
-	<div class="menu-text"> <br />
-	<h5><strong>Windows</strong></h5>
-	<p class="help-inline">Lorem ipsum doler windows genuine.</p>
-	<div class="radio">
-	<label>
-	<input name="optionsRadios8" id="optionsRadios37" value="option1" type="radio">
-	Windows Server 2008 - Standard Edition <span class="vd_red">[Add $20.00] </span> </label>
-	</div>
-	<div class="radio">
-	<label>
-	<input name="optionsRadios8" id="optionsRadios38" value="option2" type="radio">
-	Windows Server 2008 - Enterprise Edition <span class="vd_red">[Add $60.00]</span> </label>
-	</div>
-	<div class="radio">
-	<label>
-	<input name="optionsRadios8" id="optionsRadios39" value="option2" type="radio">
-	Windows Server 2008 - Data Center Edition <span class="vd_red">[Add $70.00] </span> </label>
-	</div>
-	</div>
-	</div>
-	<!-- form-group -->
-	<div class="form-group content-list">
-	<div class="menu-icon"> <i class="fa fa-cog"></i> </div>
-	<div class="menu-text">
-	<h3>Operating System Version</h3>
-	<p class="help-inline">Please select your operating systems version below:</p>
-	<div class="radio">
-	<label>
-	<input name="optionsRadios9" id="optionsRadios40" value="option1" checked="" type="radio">
-	32 bit </label>
-	</div>
-	<div class="radio">
-	<label>
-	<input name="optionsRadios9" id="optionsRadios41" value="option1" checked="" type="radio">
-	64 bit </label>
-	</div>
-	</div>
-	<!-- menu-text --> 
-	</div>
-	<!-- form-group -->
-
-	<div class="form-group content-list">
-	<div class="menu-icon"> <i class="fa fa-cogs"></i> </div>
-	<div class="menu-text">
-	<h3>Control Panel</h3>
-	<p class="help-inline">Please select your control panel below:</p>
-	<div class="radio">
-	<label>
-	<input name="optionsRadios10" id="optionsRadios42" value="option1" checked="" type="radio">
-	No Control Panel </label>
-	</div>
-	<div class="radio">
-	<label>
-	<input name="optionsRadios10" id="optionsRadios43" value="option1" checked="" type="radio">
-	Cpanel </label>
-	</div>
-	<div class="radio">
-	<label>
-	<input name="optionsRadios10" id="optionsRadios44" value="option1" checked="" type="radio">
-	Plesk </label>
-	</div>
-	</div>
-	<!-- menu-text --> 
-	</div>
-	<!-- form-group --> 
-	</div>
+		<div class="menu-text">
+		<?php foreach ($parts['actuators'] as $actuator) { ?>
+			<div class="checkbox">
+				<label>
+					<input name="actuators[]" value="<?php echo $actuator['id']; ?>" type="checkbox">
+				<?php echo $actuator['model']; ?></label>
+			</div>
+		<?php } ?>
+		</div>
+	</div>	
 	<!-- #tab2 -->
 	<div id="tab3" class="tab-pane">
 	<div class="form-group content-list">

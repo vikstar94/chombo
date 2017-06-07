@@ -20,12 +20,12 @@
 				</div>
 			</div>
 			<div class="product_info">
-				<h1>Chombo For the Home</h1>
+				<h1><?php echo $item['title']; ?></h1>
 				<div class="product_description">
-					<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ultricies tellus quis magna egestas scelerisque. Sed vitae sem nec massa tincidunt cursus et eu metus. Donec sed lorem tellus. Praesent hendrerit dignissim urna id condimentum. Duis non libero orci. Nulla luctus tellus sit amet augue mattis congue. Curabitur gravida tortor vel tempus molestie.</p>
+					<p><?php echo $item['description']; ?></p>
 				</div>
 				<div class="price">
-					Price: <h2 class="price">$90</h2>
+					Price: <h2 class="price">$<?php echo $item['price']; ?></h2>
 				</div>
 				<div class="options">
 					<!-- <div class="buying_options">
@@ -48,7 +48,10 @@
 					</div> -->
 					<div class="buying">
 						<div class="cart">
-							<a href="<?php echo base_url('index.php/items/purchase_process'); ?>" class="add">Buy Now</a>
+							<form action="<?php echo base_url('index.php/items/purchase_process'); ?>" method="POST">
+								<input type="hidden" name="item_id" value="<?php echo $item['id']; ?>">
+							<button class="add">Buy Now</button>
+							</form>
 						</div>
 					</div>
 				</div>

@@ -1,17 +1,17 @@
 <?php 
+require_once APPPATH.'/models/item_parts_model.php';
 
 /**
- * Model lass for the item_actuators table
+ * Model class for the item_actuators table
  */
-class item_actuators_model extends CI_Model {
+class item_actuators_model extends item_parts_model {
 	
 	function __construct() {
-		$this->load->database();
+		parent::__construct();
 	}
+
+	public function get_actuators($id = NULL) {
+		return $this->get_parts('actuator', $id);
+	}
+
 }
-	public function get_actuators($id) {
-		$this->db->where('id', $id);
-		$query = $this->db->get('item_actuators');
-		return $query->result_array();
-	}
- ?>

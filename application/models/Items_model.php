@@ -15,22 +15,19 @@ class Items_model extends CI_Model {
 	 * @return [type]        [description]
 	 */
 
-	public function get_items($id = FALSE) {
-
-		if ($id === FALSE) {
-			$query = $this->db->get('items');
-			return $query->result_array();
+	public function get_items($id = NULL) {
+		if (!empty($id)) {
+			$this->db->like('id', $id);
 		} 
 		
-		$this->db->like('id', $id);
 		$query = $this->db->get('items');
-		return $query->row_array();
+		return $query->result_array();
 	}
 
 	public function create_chombo($purchase_data, $user_id) {
 		$this->db->where('id', $purchase_data['item_id']);
 		$query = $this->db->get('items');
-		$item = $query->row();
+		$item = $query->row_array();
 
 		$created = date('Y-m-d H:i:s');
 
@@ -38,17 +35,24 @@ class Items_model extends CI_Model {
 			$code = $this->generate_code(20);
 		} while($this->code_exist($code));
 
-		$new_chombo['name'] = $item->name;
+		$new_chombo['name'] = $item['name'].$item['id'];
+		$new_chombo['title'] = $item['title'];
+		$new_chombo['description'] = $item['description'];
 		$new_chombo['created'] = $created;
 		$new_chombo['code'] = $code;
 
 		$this->db->insert('chombos', $new_chombo);
+		
 
 		$this->db->where('code', $code);
 		$query = $this->db->get('chombos');
 		$chombo = $query->row();
 
-		$this->db->where('item_id', $id);
+		foreach ($purchase_data['sensors'] as $sid) {
+			$sensor_ids[] = $sid;
+		}
+		
+		$this->db->where_in('id', $sensor_ids);
 		$query = $this->db->get('item_sensors');
 
 		foreach ($query->result() as $row) {
@@ -63,7 +67,10 @@ class Items_model extends CI_Model {
 			$this->db->insert('sensors', $new_sensor);
 		}
 
-		$this->db->where('item_id', $id);
+		foreach ($purchase_data['actuators'] as $aid) {
+			$actuator_ids[] = $aid;
+		}
+		$this->db->where_in('id', $actuator_ids);
 		$query = $this->db->get('item_actuators');
 
 		foreach ($query->result() as $row) {

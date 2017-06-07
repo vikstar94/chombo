@@ -8,11 +8,14 @@ class Items extends CI_Controller {
 	public function __construct() {
 		parent::__construct();
 		$this->load->model('items_model');
+		$this->load->model('item_parts_model');
 		$this->load->helper('url_helper');
 	}
 	
 	public function index () {
 		$this->data['items'] = $this->items_model->get_items();
+		$this->data['parts'] = $this->item_parts_model->get_parts();
+		
 		$this->data['title'] = 'All Items';
 
 		$this->data['custom_css'] = array('theme.min.css', 'chrome.css', 'items/store.css');
@@ -23,7 +26,13 @@ class Items extends CI_Controller {
 	}
 
 	public function purchase_process() {
+		if (empty($_POST) || empty($_POST['item_id'])) {
+			header('Location: http://localhost/chombo/index.php');
+			return;
+		}
 
+		$this->data['item_id'] = $_POST['item_id'];
+		$this->data['parts'] = $this->item_parts_model->get_parts();
 		$this->data['custom_css'] = array('theme.min.css', 'chrome.css');
 		$this->data['custom_plugin_foot'] = array('bootstrap-wizard/jquery.bootstrap.wizard.min.js');
 		$this->data['custom_js_foot'] = array('items/custom_product_wizzard.js');
@@ -51,7 +60,7 @@ class Items extends CI_Controller {
 	}
 
 	public function view($id) {
-		$this->data['item'] = $this->items_model->get_items($id);
+		$this->data['item'] = $this->items_model->get_items($id)[0];
 		$this->data['custom_css'] = array('items/pdp.css');
 
 		if (empty($this->data['item']))
