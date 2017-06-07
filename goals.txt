@@ -1,0 +1,4 @@
+goals:
+- complete store page with the step method of purchase. Change the tables item-sensors/actuators in the process
+- make an add chombo page
+- later add the friends system

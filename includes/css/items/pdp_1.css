@@ -1,0 +1,30 @@
+.product-wrapper {
+	margin: 20px 50px;
+}
+.product-title {
+	text-transform: uppercase;
+	
+}
+.product-info {
+	padding-bottom: 5px;
+	background-color: green;
+	height: 500px;
+}
+.product-info .images {
+
+}
+.product-info .images img {
+	width: 100%;
+}
+.product-info .images .main img {
+	height: 300px;
+}
+.product-info .images .small {
+	float: left;
+	margin: 10px 0;
+}
+.product-info .images .small .alternative {
+	width: 25%;
+	float: left;
+	position: relative;
+}

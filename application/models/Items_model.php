@@ -15,15 +15,16 @@ class Items_model extends CI_Model {
 	 * @return [type]        [description]
 	 */
 
-	public function get_items($name = FALSE) {
+	public function get_items($id = FALSE) {
 
-		if ($name === FALSE) {
+		if ($id === FALSE) {
 			$query = $this->db->get('items');
 			return $query->result_array();
 		} 
 		
-		$query = $this->db->like('name', $name);
-		return $query->result_array();
+		$this->db->like('id', $id);
+		$query = $this->db->get('items');
+		return $query->row_array();
 	}
 
 	public function create_chombo($purchase_data, $user_id) {
