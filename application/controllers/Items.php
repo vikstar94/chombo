@@ -34,9 +34,6 @@ class Items extends CI_Controller {
 	}
 
 	public function purchase () {
-		// TODO: make it so it takes this id dynamically
-		$item_id = 1;
-
 		$user_id = $_SESSION['user'];
 		if (empty($user_id)) {
 			header('Location: http://localhost/chombo/index.php/users/login');
@@ -44,7 +41,7 @@ class Items extends CI_Controller {
 		} 
 	
 		// TODO: encapsulate in try ... catch use exceptions in the model
-		if ($this->items_model->create_chombo($item_id, $user_id)) {
+		if ($this->items_model->create_chombo($_POST, $user_id)) {
 			header('Location: http://localhost/chombo/index.php/users/profile/' . $user_id);
 			return;
 		} else {
