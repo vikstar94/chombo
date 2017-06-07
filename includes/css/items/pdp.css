@@ -51,6 +51,7 @@
 }
 #product_layout_1 .product_info{
   width:66%;
+  position: relative;
   float:left;
   margin-left:4%;
 }
@@ -87,7 +88,8 @@
   margin: 5px;
 }
 #product_layout_1 .product_info .price{
-  margin-top:-40px;
+  /*margin-top:-40px;*/
+  display:inline-block;
 }
 #product_layout_1 .product_info .original_price{
   color:lightgray;

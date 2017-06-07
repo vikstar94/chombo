@@ -55,7 +55,7 @@ class Items extends CI_Controller {
 
 	public function view($id) {
 		$this->data['item'] = $this->items_model->get_items($id);
-		$this->data['custom_css'] = array('items/pdp_1.css');
+		$this->data['custom_css'] = array('items/pdp.css');
 
 		if (empty($this->data['item']))
 		{
@@ -65,7 +65,7 @@ class Items extends CI_Controller {
 		$this->data['title'] = $this->data['item']['title'];
 
 		$this->load->view('templates/header', $this->data);
-		$this->load->view('items/pdp_1');
+		$this->load->view('items/pdp');
 		$this->load->view('templates/footer');
 	}
 	

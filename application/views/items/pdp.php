@@ -7,29 +7,25 @@
 					<img src="http://localhost/chombo/includes/image/Chombo.jpg"/>
 				</div>
 				<div class="product_image_small">
-				Product images
-					<!-- <div class="product_image_2">
-						<img src="http://cdn.shopify.com/s/files/1/0237/1187/products/CodySteel-0004b_large.jpeg"/>
+				<div>Product images</div>
+					<div class="product_image_2">
+						<img src="<?php echo base_url($image . 'Chombo.jpg'); ?>"/>
 					</div>
 					<div class="product_image_3">
-						<img src="http://cdn.shopify.com/s/files/1/0237/1187/products/CodySteel-0004c_large.jpeg"/>
+						<img src="<?php echo base_url($image . 'Chombo.jpg'); ?>"/>
 					</div>
 					<div class="product_image_4">
-						<img src="http://cdn.shopify.com/s/files/1/0237/1187/products/CodySteel-0004d_large.jpeg"/>
-					</div> -->
+						<img src="<?php echo base_url($image . 'Chombo.jpg'); ?>"/>
+					</div>
 				</div>
 			</div>
 			<div class="product_info">
 				<h1>Chombo For the Home</h1>
 				<div class="product_description">
-					<p>Oh yes sir. Well, they're your parents, you must know them. What are their common interests, what do they like to do together? You're George McFly. Nothing, nothing, nothing, look tell her destiny has brought you together, tell her that she's the most beautiful you have ever seen. Girls like that stuff. What, what are you doing George? Lorraine, are you up there?</p>
+					<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ultricies tellus quis magna egestas scelerisque. Sed vitae sem nec massa tincidunt cursus et eu metus. Donec sed lorem tellus. Praesent hendrerit dignissim urna id condimentum. Duis non libero orci. Nulla luctus tellus sit amet augue mattis congue. Curabitur gravida tortor vel tempus molestie.</p>
 				</div>
 				<div class="price">
-					<h2 class="original_price">$90</h2>
-					<h2 class="sale_price">$75</h2>
-				</div>
-				<div class="related_info">
-					<span class="sku">SKU:1234567</span><span class="quantity">QTY:85</span>
+					Price: <h2 class="price">$90</h2>
 				</div>
 				<div class="options">
 					<!-- <div class="buying_options">
@@ -51,12 +47,8 @@
 						</div>
 					</div> -->
 					<div class="buying">
-						<div class="quantity">
-							<label for="quantity">QTY:</label>
-							<input type="text">
-						</div>
 						<div class="cart">
-							<a href="http://localhost/chombo/index.php/items/purchase" class="add">Buy Now</a>
+							<a href="<?php echo base_url('index.php/items/purchase_process'); ?>" class="add">Buy Now</a>
 						</div>
 					</div>
 				</div>

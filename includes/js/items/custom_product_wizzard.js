@@ -1,5 +1,5 @@
 jQuery(document).ready(function() {
-	alert('ready');
+
   "use strict";
   	
   var tablet_width = 751;
