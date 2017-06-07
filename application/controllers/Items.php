@@ -15,10 +15,21 @@ class Items extends CI_Controller {
 		$this->data['items'] = $this->items_model->get_items();
 		$this->data['title'] = 'All Items';
 
-		$this->data['custom_css'] = array('items/pdp.css');
+		$this->data['custom_css'] = array('theme.min.css', 'chrome.css', 'items/store.css');
 
 		$this->load->view('templates/header', $this->data);
-		$this->load->view('items/pdp');
+		$this->load->view('items/index');
+		$this->load->view('templates/footer');
+	}
+
+	public function purchase_process() {
+
+		$this->data['custom_css'] = array('theme.min.css', 'chrome.css');
+		$this->data['custom_plugin_foot'] = array('bootstrap-wizard/jquery.bootstrap.wizard.min.js');
+		$this->data['custom_js_foot'] = array('items/custom_product_wizzard.js');
+
+		$this->load->view('templates/header', $this->data);
+		$this->load->view('items/purchase_process');
 		$this->load->view('templates/footer');
 	}
 
@@ -42,18 +53,19 @@ class Items extends CI_Controller {
 		}
 	}
 
-	public function view ($name) {
-		$data['item'] = $this->items_model->get_items($name);
+	public function view($id) {
+		$this->data['item'] = $this->items_model->get_items($id);
+		$this->data['custom_css'] = array('items/pdp_1.css');
 
-		if (empty($data['item']))
+		if (empty($this->data['item']))
 		{
 			show_404();
 		}
 
-		$data['title'] = $data['item']['title'];
+		$this->data['title'] = $this->data['item']['title'];
 
-		$this->load->view('templates/header', $data);
-		$this->load->view('items/view', $data);
+		$this->load->view('templates/header', $this->data);
+		$this->load->view('items/pdp_1');
 		$this->load->view('templates/footer');
 	}
 	

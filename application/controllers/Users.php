@@ -72,8 +72,6 @@ class Users extends CI_Controller {
 		}
 
 		$code = $_POST['code'];
-		var_dump($this->data, $_POST);
-		die();
 		$user_id = $_SESSION['user'];
 		if ($this->users_model->add_chombo($code,$user_id)) {
 			header("Location: http://localhost/chombo/index.php/users/profile/$user_id");

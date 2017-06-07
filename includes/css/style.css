@@ -1489,6 +1489,11 @@ Content Area
   padding: 0;
 }
 
+.nopadding {
+  padding-left: 0;
+  padding-right: 0;
+}
+
 /* Entries
 --------------------------------------------- */
 

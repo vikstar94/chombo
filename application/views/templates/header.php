@@ -42,7 +42,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		<link rel="stylesheet" href="<?php echo base_url($css . $ccss); ?>">
 	<?php } ?>
 	<style id='parallax-pro-theme-inline-css' type='text/css'>
-	.home-section-1 { background-image: url(http://www.theoaksonwoodville.com/wp-content/uploads/2015/10/The-Oaks-On-Woodville-Assisted-Living.png); }.home-section-3 { background-image: url(http://www.theoaksonwoodville.com/wp-content/uploads/2015/10/creek-and-old-growth-forest-larch-mountain.jpg); }.home-section-5 { background-image: url(http://www.theoaksonwoodville.com/wp-content/themes/parallax-pro/images/bg-5.jpg); }
+	.home-section-1 { background-image: url(<?php echo base_url($image . '/home/The-Oaks-On-Woodville-Assisted-Living.png'); ?>; }.home-section-3 { background-image: url(<?php echo base_url($image . '/home/creek-and-old-growth-forest-larch-mountain.jpg'); ?>; }.home-section-5 { background-image: url(<?php echo base_url($image . '/home/bg-5.jpg'); ?>; }
 	</style>
 	<link rel='stylesheet' id='parallax-google-fonts-css'  href='//fonts.googleapis.com/css?family=Montserrat%7CSorts+Mill+Goudy&#038;ver=1.2' type='text/css' media='all' />
 
@@ -50,6 +50,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <link href="<?php echo base_url($css . 'theme-responsive.min.css'); ?>" rel="stylesheet" type="text/css"> 
 
 	<!-- head scripts -->
+	<script type="text/javascript" src="<?php echo base_url($js . 'jquery.js'); ?>"></script> 
 	<script type="text/javascript" src="<?php echo base_url($js . 'modernizr.js'); ?>"></script> 
     <script type="text/javascript" src="<?php echo base_url($js . 'mobile-detect.min.js'); ?>"></script> 
     <script type="text/javascript" src="<?php echo base_url($js . 'mobile-detect-modernizr.js'); ?>"></script> 
