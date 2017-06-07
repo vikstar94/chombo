@@ -26,8 +26,8 @@ class Items_model extends CI_Model {
 		return $query->result_array();
 	}
 
-	public function create_chombo($id, $user_id) {
-		$this->db->where('id', $id);
+	public function create_chombo($purchase_data, $user_id) {
+		$this->db->where('id', $purchase_data['item_id']);
 		$query = $this->db->get('items');
 		$item = $query->row();
 
