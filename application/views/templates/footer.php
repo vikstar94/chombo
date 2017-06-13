@@ -37,10 +37,15 @@
 <!-- To add a custom js files to the footer for the current view just add:
 			$this->data('custom_js_foot') = array({list of items});
 		to the current method loading this view in the controller -->
-<?php if (!empty($custom_js_foot)) foreach ($custom_js_foot as $cjsh) { var_dump(base_url($js . $cjsh));?>
+<?php if (!empty($custom_js_foot)) foreach ($custom_js_foot as $cjsh) { ?>
 	<script type='text/javascript' src="<?php echo base_url($js . $cjsh); ?>"></script>
 <?php } ?>
 <!-- other sources -->
+<?php if (!empty($chombo_data)) { ?>
+<script async defer
+ src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDBQtfn89NIdpyhBlbx9kCsLVuFrY8GGkg&callback=initMap">
+</script>
+<?php } ?>
 <script type='text/javascript' src="<?php echo base_url($js . 'scripts.js'); ?>"></script>
 </body>
 </html>

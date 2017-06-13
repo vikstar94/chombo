@@ -1,11 +1,10 @@
 <div class="site-inner">
-<div class="spacer"></div>
-	<div class="container">   
+	<div class="">   
 	<!-- Middle Content Start -->
 
 		<div class="vd_content-wrapper">
-			<div class="vd_container">
-				<div class="vd_content clearfix">
+			<div class="">
+				<div class=" clearfix">
 					<div class="vd_content-section clearfix">
 						<div class="row">
 							<div class="col-sm-3">
@@ -25,12 +24,17 @@
 														<td><span class="label label-danger">Inactive</span></td>
 													<?php } ?>
 												</tr>
+												 <tr>
+													<td>Member Since</td>
+													<td class="help-inline"> <?php echo date('M d, Y', strtotime($profile_data['created'])); ?> </td>
+													<!-- <td> Jan 07, 2014 </td> -->
+												</tr>
 											</tbody>
 											</table>
 										</div>
 										<?php if ($user_data->id === $profile_data['id']) { ?>
 										<div class="row">
-											<div class="col-xs-12"><a class="btn btn-block" href="<?php echo base_url('index.php/users/logout'); ?>">Log Out</a></div>
+											<div class="col-xs-12"><a class="btn label-danger btn-block" style="color: white" href="<?php echo base_url('index.php/users/logout'); ?>">Log Out</a></div>
 										</div>
 										<?php } ?>
 									</div>
@@ -42,6 +46,10 @@
 									<ul class="nav nav-tabs widget">
 										<li class="active"> <a data-toggle="tab" href="#profile-tab"> Profile <span class="menu-active"><i class="fa fa-caret-up"></i></span> </a></li>
 										<li> <a data-toggle="tab" href="#chombos-tab"> Chombos <span class="menu-active"><i class="fa fa-caret-up"></i></span> </a></li>
+										<?php if ($user_data->id === $profile_data['id']) { ?>
+											<li> <a data-toggle="tab" href="#orders-tab"> Orders <span class="menu-active"><i class="fa fa-caret-up"></i></span> </a></li>
+										<?php } ?>
+										<li> <a data-toggle="tab" href="#friends-tab"> Friends <span class="menu-active"><i class="fa fa-caret-up"></i></span> </a></li>
 									</ul>
 									<div class="tab-content">
 										<div id="profile-tab" class="tab-pane active">
@@ -84,8 +92,8 @@
 										<div id="chombos-tab" class="tab-pane">
 											<div class="pd-20">
 												<div class="vd_info tr"><a href="<?php echo base_url('index.php/users/add_chombo'); ?>" class="btn vd_btn btn-xs vd_bg-yellow"> <i class="fa fa-plus append-icon"></i> Register New Chombo </a> </div>         
-												<h3 class="mgbt-xs-15 mgtp-10 font-semibold"><i class="fa fa-bolt mgr-10 profile-icon"></i> CHOMBOS</h3>        
-												<table class="table table-bordered table-hover">
+												<h3 class="mgbt-xs-15 mgtp-10 font-semibold"><i class="fa fa-chain mgr-10 profile-icon"></i> CHOMBOS</h3>        
+												<table class="table table-striped table-hover">
 													<thead>
 														<tr>
 															<th>#</th>
@@ -94,9 +102,7 @@
 															<th>Access Level</th>
 															<th>Status</th>
 															<th>Owner</th>
-															<?php if ($user_data->id === $profile_data['id']) { ?>                               
 															<th>Actions</th>
-															<?php } ?>                                       
 														</tr>
 													</thead>   
 													<tbody>
@@ -112,7 +118,6 @@
 															<td class="center"><?php echo $chombo['access_level']; ?></td>
 															<td class="center"><?php echo $chombo['status']; ?></td>
 															<td class="center"><?php echo $chombo['owner']; ?></td>
-															<?php if ($user_data->id === $profile_data['id']) { ?>
 															<td class="menu-action rounded-btn">
 																<a class="btn menu-icon vd_bg-green" data-placement="top" data-toggle="tooltip" data-original-title="view">
 																		 <i class="fa fa-eye"></i>
@@ -121,17 +126,16 @@
 																<a class="btn menu-icon vd_bg-yellow" data-placement="top" data-toggle="tooltip" data-original-title="edit">
 																		 <i class="fa fa-pencil"></i>
 																	</a>
-																	<?php } ?>
 																<a class="btn menu-icon vd_bg-red" data-placement="top" data-toggle="tooltip" data-original-title="delete">
 																		 <i class="fa fa-times"></i>
 																	</a>                 
+																<?php } ?>
 															</td>
-															<?php } ?>
 														</tr>
 														<?php } // end of foreach
 														} else { // no chombos? ?>
 														<tr>
-															<td colspan="6" class="center">You have not added any chombos yet. Do you want to do it <a class="btn vd_btn">NOW</a></td>
+															<td colspan="7" class="center">You have not added any chombos yet. Do you want to do it <a class="btn vd_btn">NOW</a></td>
 														</tr>
 														<?php } ?>	
 													</tbody>
@@ -140,6 +144,204 @@
 												</div>        
 											</div>
 										</div>
+										<!-- chombos-tab -->
+										<?php if ($user_data->id === $profile_data['id']) { ?>
+										<div id="orders-tab" class="tab-pane">
+											<div class="pd-20">        
+												<h3 class="mgbt-xs-15 mgtp-10 font-semibold"><i class="fa fa-calendar mgr-10 profile-icon"></i> ORDERS</h3>        
+												<table class="table table-striped table-hover">
+													<thead>
+														<tr>
+															<th>#</th>
+															<th>Order #</th>                                  
+															<th>Created</th>
+															<th>Status</th>
+															<th>Actions</th>
+														</tr>
+													</thead>   
+													<tbody>
+														<tr>
+															<td>1</td>
+															<td>ORD3442MD75</td>
+															<td>Jul 27, 2017</td>
+															<td>Shipped</td>
+															<td class="menu-action rounded-btn">
+																<a class="btn menu-icon vd_bg-green" data-placement="top" data-toggle="tooltip" data-original-title="view">
+																	<i class="fa fa-eye"></i>
+																</a>                                      
+																<a class="btn menu-icon vd_bg-yellow" data-placement="top" data-toggle="tooltip" data-original-title="edit">
+																	<i class="fa fa-pencil"></i>
+																</a>
+																<a class="btn menu-icon vd_bg-red" data-placement="top" data-toggle="tooltip" data-original-title="delete">
+																	<i class="fa fa-times"></i>
+																</a>
+															</td>
+														</tr>
+														<tr>
+															<td colspan="5" class="center">Sorry, you don't have any orders yet. You can make one easily at the store!</td>
+														</tr>
+													</tbody>
+												</table>
+												<div class="">
+												</div>        
+											</div>
+										</div>
+										<?php } ?>
+										<!-- orders-tab -->
+										<div id="friends-tab" class="tab-pane">
+											<div class="pd-20">
+												<h3 class="mgbt-xs-15 mgtp-10 font-semibold"><i class="fa fa-users mgr-10 profile-icon"></i> FRIENDS</h3>
+												<ul class="nav nav-pills">
+												  <li class="active"><a href="#photos-1" data-toggle="tab">Friends</a></li>
+												  <li><a href="#photos-2" data-toggle="tab">Pending Request</a></li>
+												  <li><a href="#photos-3" data-toggle="tab">Blacklisted</a></li>
+												</ul>
+												<div class="content-grid column-xs-3 column-sm-4 column-md-4 column-lg-6 height-xs-4 mgbt-xs-20">	
+												   <div>
+														<ul class="list-wrapper">
+															<li> <a href="#"> 
+																	<span class="menu-icon"><img src="<?php echo base_url($image . 'avatar/placeholder.jpg'); ?>" alt="example image"></span> 
+																 </a>
+																<span class="menu-text"> Gabriella Montagna
+																	<span class="menu-info">
+																		<span class="menu-date">San Diego</span>
+																		<span class="menu-action">
+																			<span data-placement="bottom" data-toggle="tooltip" data-original-title="Approve" class="menu-action-icon vd_green vd_bd-green">
+																				<i class="fa fa-check"></i>
+																			</span> 
+																			<span data-placement="bottom" data-toggle="tooltip" data-original-title="Reject" class="menu-action-icon vd_red vd_bd-red">
+																				<i class="fa fa-times"></i>
+																			</span>
+																		</span>
+																	</span>
+																</span> 
+															 </li>
+															<li class="warning"> 
+																	<a href="#"> 
+																		<span class="menu-icon"><img src="<?php echo base_url($image . 'avatar/placeholder.jpg'); ?>" alt="example image"></span>  
+																	</a>                            
+																	<span class="menu-text">  Jonathan Fuzzy
+																		<span class="menu-info">
+																			<span class="menu-date">Seattle</span>
+																			<span class="menu-action">
+																				<span data-placement="bottom" data-toggle="tooltip" data-original-title="Approve" class="menu-action-icon vd_green vd_bd-green">
+																					<i class="fa fa-check"></i>
+																				</span> 
+																				<span data-placement="bottom" data-toggle="tooltip" data-original-title="Reject" class="menu-action-icon vd_red vd_bd-red">
+																					<i class="fa fa-times"></i>
+																				</span>
+																			</span>                                
+																		</span>                            
+																	</span> 
+															 </li>    
+															<li> <a href="#"> 
+																	<span class="menu-icon"><img src="<?php echo base_url($image . 'avatar/placeholder.jpg'); ?>" alt="example image"></span> 
+																 </a>    
+																<span class="menu-text">  Sakura Hinata
+																	<span class="menu-info">
+																		<span class="menu-date">Hawaii</span>
+																		<span class="menu-action">
+																			<span data-placement="bottom" data-toggle="tooltip" data-original-title="Approve" class="menu-action-icon vd_green vd_bd-green">
+																				<i class="fa fa-check"></i>
+																			</span> 
+																			<span data-placement="bottom" data-toggle="tooltip" data-original-title="Reject" class="menu-action-icon vd_red vd_bd-red">
+																				<i class="fa fa-times"></i>
+																			</span>
+																		</span>                                
+																	</span>
+																</span> 
+															</li>                                     
+															<li> <a href="#"> 
+																	<span class="menu-icon"><img src="<?php echo base_url($image . 'avatar/placeholder.jpg'); ?>" alt="example image"></span> 
+																 </a>    
+																<span class="menu-text">  Rikudou Sennin
+																	<span class="menu-info">
+																		<span class="menu-date">Las Vegas</span>
+																		<span class="menu-action">
+																			<span data-placement="bottom" data-toggle="tooltip" data-original-title="Approve" class="menu-action-icon vd_green vd_bd-green">
+																				<i class="fa fa-check"></i>
+																			</span> 
+																			<span data-placement="bottom" data-toggle="tooltip" data-original-title="Reject" class="menu-action-icon vd_red vd_bd-red">
+																				<i class="fa fa-times"></i>
+																			</span>
+																		</span>                                
+																	</span>
+																</span> 
+															</li> 
+															<li> <a href="#"> 
+																	<span class="menu-icon"><img src="<?php echo base_url($image . 'avatar/placeholder.jpg'); ?>" alt="example image"></span>  
+																 </a>   
+																<span class="menu-text">  Kim Kardiosun
+																	<span class="menu-info">
+																		<span class="menu-date">New York</span>
+																		<span class="menu-action">
+																			<span data-placement="bottom" data-toggle="tooltip" data-original-title="Approve" class="menu-action-icon vd_green vd_bd-green">
+																				<i class="fa fa-check"></i>
+																			</span> 
+																			<span data-placement="bottom" data-toggle="tooltip" data-original-title="Reject" class="menu-action-icon vd_red vd_bd-red">
+																				<i class="fa fa-times"></i>
+																			</span>
+																		</span>                                
+																	</span>
+																</span> 
+															 </li>
+															<li> <a href="#"> 
+																	<span class="menu-icon"><img src="<?php echo base_url($image . 'avatar/placeholder.jpg'); ?>" alt="example image"></span>
+																 </a>    
+																<span class="menu-text">   Brad Pita
+																	<span class="menu-info">
+																		<span class="menu-date">Seattle</span>
+																		<span class="menu-action">
+																			<span data-placement="bottom" data-toggle="tooltip" data-original-title="Approve" class="menu-action-icon vd_green vd_bd-green">
+																				<i class="fa fa-check"></i>
+																			</span> 
+																			<span data-placement="bottom" data-toggle="tooltip" data-original-title="Reject" class="menu-action-icon vd_red vd_bd-red">
+																				<i class="fa fa-times"></i>
+																			</span>
+																		</span>                                
+																	</span>                             
+																</span> 
+															</li>                                     
+															<li> <a href="#"> 
+																	<span class="menu-icon"><img src="<?php echo base_url($image . 'avatar/placeholder.jpg'); ?>" alt="example image"></span> 
+																 </a>   
+																<span class="menu-text">  Celline Dior
+																	<span class="menu-info">
+																		<span class="menu-date">Los Angeles</span>
+																		<span class="menu-action">
+																			<span data-placement="bottom" data-toggle="tooltip" data-original-title="Approve" class="menu-action-icon vd_green vd_bd-green">
+																				<i class="fa fa-check"></i>
+																			</span> 
+																			<span data-placement="bottom" data-toggle="tooltip" data-original-title="Reject" class="menu-action-icon vd_red vd_bd-red">
+																				<i class="fa fa-times"></i>
+																			</span>
+																		</span>                                
+																	</span>                              
+																</span> 
+															</li>
+															<li>
+																<a href="#"> 
+																	<span class="menu-icon"><img src="<?php echo base_url($image . 'avatar/placeholder.jpg'); ?>" alt="example image"></span>
+																</a>
+																<span class="menu-text">  Goerge Bruno Marz
+																	<span class="menu-info">
+																		<span class="menu-date">Las Vegas</span>
+																		<span class="menu-action">
+																			<span data-placement="bottom" data-toggle="tooltip" data-original-title="Approve" class="menu-action-icon vd_green vd_bd-green">
+																				<i class="fa fa-check"></i>
+																			</span> 
+																			<span data-placement="bottom" data-toggle="tooltip" data-original-title="Reject" class="menu-action-icon vd_red vd_bd-red">
+																				<i class="fa fa-times"></i>
+																			</span>
+																		</span>
+																	</span>
+																</span> 
+															</li>
+										   				</ul>
+													</div>
+												</div>
+											</div><!-- pd-20 -->  
+										</div> 
 									</div><!-- tab-content -->
 								</div><!-- tabs-widget -->
 							</div>

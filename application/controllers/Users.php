@@ -58,6 +58,8 @@ class Users extends CI_Controller {
 			return;
 		}
 
+		$this->data['custom_css'] = array('theme.min.css', 'chrome.css');
+
 		$this->load->view('templates/header', $this->data);
 		$this->load->view('users/profile');
 		$this->load->view('templates/footer');

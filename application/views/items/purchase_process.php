@@ -37,98 +37,322 @@
 	</div>
 	<div class="tab-content no-bd">
 	<div id="tab1" class="tab-pane">
-		<div class="menu-text">
-		<?php foreach ($parts['sensors'] as $sensor) { ?>
-			<div class="checkbox">
-				<label>
-					<input name="sensors[]" value="<?php echo $sensor['id']; ?>" type="checkbox">
-				<?php echo $sensor['model']; ?></label>
+		<div class="form-group content-list">
+			<div class="menu-icon"> <i class="fa fa-cloud"></i> </div>
+			<div class="menu-text">
+				<h3>Humidity Sensors</h3>
+				<p class="help-inline">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+				<div class="radio">
+					<label>
+					<input name="sensors[humidity]" value="1" checked="" type="radio">
+					HS 1.0</label>
+				</div>
+				<div class="radio">
+					<label>
+					<input name="sensors[humidity]" value="5" type="radio">
+					HS 2.0</label>
+				</div>
+				<div class="radio">
+					<label>
+					<input name="sensors[humidity]" value="9" type="radio">
+					HS 3.0</label>
+				</div>
 			</div>
-		<?php } ?>
+		</div>
+		<div class="form-group content-list">
+			<div class="menu-icon"> <i class="fa fa-sun-o"></i> </div>
+			<div class="menu-text">
+				<h3>Light Sensors</h3>
+				<p class="help-inline">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+				<div class="radio">
+					<label>
+					<input name="sensors[light]" value="2" checked="" type="radio">
+					LS 1.0</label>
+				</div>
+				<div class="radio">
+					<label>
+					<input name="sensors[light]" value="6" type="radio">
+					LS 2.0</label>
+				</div>
+				<div class="radio">
+					<label>
+					<input name="sensors[light]" value="10" type="radio">
+					LS 3.0</label>
+				</div>
+			</div>
+		</div>
+		<div class="form-group content-list">
+			<div class="menu-icon"> <i class="fa fa-location-arrow"></i> </div>
+			<div class="menu-text">
+				<h3>GPS</h3>
+				<p class="help-inline">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+				<div class="radio">
+					<label>
+					<input name="sensors[gps]" value="3" checked="" type="radio">
+					GPS 1.0</label>
+				</div>
+				<div class="radio">
+					<label>
+					<input name="sensors[gps]" value="7" type="radio">
+					GPS 2.0</label>
+				</div>
+				<div class="radio">
+					<label>
+					<input name="sensors[gps]" value="11" type="radio">
+					GPS 3.0</label>
+				</div>
+			</div>
+		</div>
+		<div class="form-group content-list">
+			<div class="menu-icon"> <i class="fa fa-car"></i> </div>
+			<div class="menu-text">
+				<h3>Polution Sensors</h3>
+				<p class="help-inline">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+				<div class="radio">
+					<label>
+					<input name="sensors[polution]" value="4" checked="" type="radio">
+					PS 1.0</label>
+				</div>
+				<div class="radio">
+					<label>
+					<input name="sensors[polution]" value="8" type="radio">
+					PS 2.0</label>
+				</div>
+				<div class="radio">
+					<label>
+					<input name="sensors[polution]" value="12" type="radio">
+					PS 3.0</label>
+				</div>
+			</div>
 		</div>
 	</div>
 	<!-- #tab-1 -->
 	<div id="tab2" class="tab-pane">
-		<div class="menu-text">
-		<?php foreach ($parts['actuators'] as $actuator) { ?>
-			<div class="checkbox">
-				<label>
-					<input name="actuators[]" value="<?php echo $actuator['id']; ?>" type="checkbox">
-				<?php echo $actuator['model']; ?></label>
+		<div class="form-group content-list">
+			<div class="menu-icon"> <i class="fa fa-circle-o"></i> </div>
+			<div class="menu-text">
+				<h3>Left Wheels</h3>
+				<p class="help-inline">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+				<div class="radio">
+					<label>
+					<input name="sensors[left_wheel]" value="1" checked="" type="radio">
+					Left Wheel 1.0</label>
+				</div>
+				<div class="radio">
+					<label>
+					<input name="sensors[left_wheel]" value="6" type="radio">
+					Left Wheel 2.0</label>
+				</div>
+				<div class="radio">
+					<label>
+					<input name="sensors[left_wheel]" value="11" type="radio">
+					Left Wheel 3.0</label>
+				</div>
 			</div>
-		<?php } ?>
+		</div>
+		<div class="form-group content-list">
+			<div class="menu-icon"> <i class="fa fa-circle-o"></i> </div>
+			<div class="menu-text">
+				<h3>Right Wheels</h3>
+				<p class="help-inline">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+				<div class="radio">
+					<label>
+					<input name="sensors[right_wheel]" value="2" checked="" type="radio">
+					Right Wheel 1.0</label>
+				</div>
+				<div class="radio">
+					<label>
+					<input name="sensors[right_wheel]" value="8" type="radio">
+					Right Wheel 2.0</label>
+				</div>
+				<div class="radio">
+					<label>
+					<input name="sensors[right_wheel]" value="12" type="radio">
+					Right Wheel 3.0</label>
+				</div>
+			</div>
+		</div>
+		<div class="form-group content-list">
+			<div class="menu-icon"> <i class="fa fa-calendar-o"></i> </div>
+			<div class="menu-text">
+				<h3>Water Tanks</h3>
+				<p class="help-inline">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+				<div class="radio">
+					<label>
+					<input name="sensors[water_tank]" value="3" checked="" type="radio">
+					Water Tank 1.0</label>
+				</div>
+				<div class="radio">
+					<label>
+					<input name="sensors[water_tank]" value="9" type="radio">
+					Water Tank 2.0</label>
+				</div>
+				<div class="radio">
+					<label>
+					<input name="sensors[water_tank]" value="13" type="radio">
+					Water Tank 3.0</label>
+				</div>
+			</div>
+		</div>
+		<div class="form-group content-list">
+			<div class="menu-icon"> <i class="fa fa-bath"></i> </div>
+			<div class="menu-text">
+				<h3>Water Pumps</h3>
+				<p class="help-inline">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+				<div class="radio">
+					<label>
+					<input name="sensors[water_pump]" value="4" checked="" type="radio">
+					Water Pump 1.0</label>
+				</div>
+				<div class="radio">
+					<label>
+					<input name="sensors[water_pump]" value="10" type="radio">
+					Water Pump 2.0</label>
+				</div>
+				<div class="radio">
+					<label>
+					<input name="sensors[water_pump]" value="14" type="radio">
+					Water Pump 3.0</label>
+				</div>
+			</div>
+		</div>
+		<div class="form-group content-list">
+			<div class="menu-icon"> <i class="fa fa-lightbulb-o"></i> </div>
+			<div class="menu-text">
+				<h3>LED Lamps</h3>
+				<p class="help-inline">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+				<div class="radio">
+					<label>
+					<input name="sensors[led_lamp]" value="5" checked="" type="radio">
+					LED Lamp 1.0</label>
+				</div>
+				<div class="radio">
+					<label>
+					<input name="sensors[led_lamp]" value="11" type="radio">
+					LED Lamp 2.0</label>
+				</div>
+				<div class="radio">
+					<label>
+					<input name="sensors[led_lamp]" value="15" type="radio">
+					LED Lamp 3.0</label>
+				</div>
+			</div>
 		</div>
 	</div>	
 	<!-- #tab2 -->
 	<div id="tab3" class="tab-pane">
-	<div class="form-group content-list">
-	<div class="menu-icon"> <i class="fa fa-cloud-upload"></i> </div>
-	<div class="menu-text">
-	<h3>Backup Services</h3>
-	<p class="help-inline">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-	<div class="radio">
-	<label>
-	<input name="optionsRadios11" id="optionsRadios45" value="option1" checked="" type="radio">
-	No Backup </label>
-	</div>
-	<div class="radio">
-	<label>
-	<input name="optionsRadios11" id="optionsRadios46" value="option2" type="radio">
-	10 GB Backup per week <span class="vd_red">[Add $10.00]</span> </label>
-	</div>
-	<div class="radio">
-	<label>
-	<input name="optionsRadios11" id="optionsRadios47" value="option2" type="radio">
-	20 GB Backup per week <span class="vd_red">[Add $20.00]</span> </label>
-	</div>
-	<div class="radio">
-	<label>
-	<input name="optionsRadios11" id="optionsRadios48" value="option2" type="radio">
-	30 GB Backup per week <span class="vd_red">[Add $30.00]</span> </label>
-	</div>
-	<div class="radio">
-	<label>
-	<input name="optionsRadios11" id="optionsRadios49" value="option2" type="radio">
-	40 GB Backup per week <span class="vd_red">[Add $40.00]</span> </label>
-	</div>
-	<div class="radio">
-	<label>
-	<input name="optionsRadios11" id="optionsRadios50" value="option2" type="radio">
-	50 GB Backup per week <span class="vd_red">[Add $50.00]</span> </label>
-	</div>
-	<div class="radio">
-	<label>
-	<input name="optionsRadios11" id="optionsRadios51" value="option2" type="radio">
-	60 GB Backup per week <span class="vd_red">[Add $60.00]</span> </label>
-	</div>
-	<div class="radio">
-	<label>
-	<input name="optionsRadios11" id="optionsRadios52" value="option2" type="radio">
-	100 GB Backup per week <span class="vd_red">[Add $100.00]</span> </label>
-	</div>
-	</div>
-	</div>
-	<!-- form-group -->
-	<div class="form-group content-list">
-	<div class="menu-icon"> <i class="fa fa-fire"></i> </div>
-	<div class="menu-text">
-	<h3>Firewall</h3>
-	<p class="help-inline">Please select your firewall below:</p>
-	<div class="radio">
-	<label>
-	<input name="optionsRadios12" id="optionsRadios53" value="option1" checked="" type="radio">
-	No Firewall </label>
-	</div>
-	<div class="radio">
-	<label>
-	<input name="optionsRadios12" id="optionsRadios54" value="option1" type="radio">
-	Super Firewall </label>
-	</div>
-	</div>
-	<!-- menu-text --> 
-	</div>
-	<!-- form-group --> 
-
+		<div class="form-group content-list">
+			<div class="menu-icon"> <i class="fa fa-paint-brush"></i> </div>
+			<div class="menu-text">
+				<h3>Color</h3>
+				<p class="help-inline">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+				<div class="radio">
+					<label>
+					<input name="optionsRadios11" id="optionsRadios45" value="option1" checked="" type="radio">
+						White </label>
+				</div>
+				<div class="radio">
+					<label>
+					<input name="optionsRadios11" id="optionsRadios46" value="option2" type="radio">
+						Blue </label>
+				</div>
+				<div class="radio">
+					<label>
+					<input name="optionsRadios11" id="optionsRadios47" value="option2" type="radio">
+						Green</span> </label>
+				</div>
+				<div class="radio">
+					<label>
+					<input name="optionsRadios11" id="optionsRadios48" value="option2" type="radio">
+					Red</span> </label>
+				</div>
+				<div class="radio">
+					<label>
+					<input name="optionsRadios11" id="optionsRadios49" value="option2" type="radio">
+						Yellow</span> </label>
+				</div>
+				<div class="radio">
+					<label>
+					<input name="optionsRadios11" id="optionsRadios50" value="option2" type="radio">
+					Black</span> </label>
+				</div>
+			</div>
+		</div>
+		<!-- form-group -->
+		<div class="form-group content-list">
+			<div class="menu-icon"> <i class="fa fa-lightbulb-o"></i> </div>
+			<div class="menu-text">
+				<h3>Lights</h3>
+				<p class="help-inline">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+				<div class="radio">
+					<label>
+					<input name="optionsRadios12" id="optionsRadios45" value="option1" checked="" type="radio">
+						Front Lights Only </label>
+				</div>
+				<div class="radio">
+					<label>
+					<input name="optionsRadios12" id="optionsRadios46" value="option2" type="radio">
+						Back Lights Only </label>
+				</div>
+				<div class="radio">
+					<label>
+					<input name="optionsRadios12" id="optionsRadios47" value="option2" type="radio">
+						Front & Back Lights </span> </label>
+				</div>
+				<div class="radio">
+					<label>
+					<input name="optionsRadios12" id="optionsRadios48" value="option2" type="radio">
+					Side Lights Only </span> </label>
+				</div>
+				<div class="radio">
+					<label>
+					<input name="optionsRadios12" id="optionsRadios49" value="option2" type="radio">
+						Front & Side Lights </span> </label>
+				</div>
+				<div class="radio">
+					<label>
+					<input name="optionsRadios12" id="optionsRadios50" value="option2" type="radio">
+					All Sides</span> </label>
+				</div>
+			</div>
+		</div>
+		<div class="form-group content-list">
+			<div class="menu-icon"> <i class="fa fa-volume-up"></i> </div>
+			<div class="menu-text">
+				<h3>Speakers</h3>
+				<p class="help-inline">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+				<div class="radio">
+					<label>
+					<input name="optionsRadios13" id="optionsRadios45" value="option1" checked="" type="radio">
+						2 Small at front </label>
+				</div>
+				<div class="radio">
+					<label>
+					<input name="optionsRadios13" id="optionsRadios46" value="option2" type="radio">
+						1 Big at front </label>
+				</div>
+				<div class="radio">
+					<label>
+					<input name="optionsRadios13" id="optionsRadios47" value="option2" type="radio">
+						2x2 small for both sides </span> </label>
+				</div>
+				<div class="radio">
+					<label>
+					<input name="optionsRadios13" id="optionsRadios48" value="option2" type="radio">
+						2x1 big for both sides </span> </label>
+				</div>
+				<div class="radio">
+					<label>
+					<input name="optionsRadios13" id="optionsRadios49" value="option2" type="radio">
+						3x2 small for front and sides </span> </label>
+				</div>
+				<div class="radio">
+					<label>
+					<input name="optionsRadios13" id="optionsRadios50" value="option2" type="radio">
+					3x1 big for front and sides </span> </label>
+				</div>
+			</div>
+		</div>
 	</div>
 	<!-- #tab3 -->
 	<div id="tab4" class="tab-pane">

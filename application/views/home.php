@@ -1,4 +1,6 @@
-
+	<style id='parallax-pro-theme-inline-css' type='text/css'>
+	.home-section-1 { background-image: url(<?php echo base_url($image . 'home/The-Oaks-On-Woodville-Assisted-Living.png'); ?>) }.home-section-3 { background-image: url(<?php echo base_url($image . '/home/creek-and-old-growth-forest-larch-mountain.jpg'); ?>) }.home-section-5 { background-image: url(<?php echo base_url($image . '/home/bg-5.jpg'); ?> )}
+	</style>
 	<div class="site-inner">
 		<div class="content-sidebar-wrap">
 			<main class="content">

@@ -61,7 +61,7 @@ class Items extends CI_Controller {
 
 	public function view($id) {
 		$this->data['item'] = $this->items_model->get_items($id)[0];
-		$this->data['custom_css'] = array('items/pdp.css');
+		$this->data['custom_css'] = array('theme.min.css', 'chrome.css', 'items/pdp.css');
 
 		if (empty($this->data['item']))
 		{

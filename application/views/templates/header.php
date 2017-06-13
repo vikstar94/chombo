@@ -41,9 +41,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<?php if (!empty($custom_css)) foreach ($custom_css as $ccss) { ?>
 		<link rel="stylesheet" href="<?php echo base_url($css . $ccss); ?>">
 	<?php } ?>
-	<style id='parallax-pro-theme-inline-css' type='text/css'>
-	.home-section-1 { background-image: url(<?php echo base_url($image . '/home/The-Oaks-On-Woodville-Assisted-Living.png'); ?>; }.home-section-3 { background-image: url(<?php echo base_url($image . '/home/creek-and-old-growth-forest-larch-mountain.jpg'); ?>; }.home-section-5 { background-image: url(<?php echo base_url($image . '/home/bg-5.jpg'); ?>; }
-	</style>
 	<link rel='stylesheet' id='parallax-google-fonts-css'  href='//fonts.googleapis.com/css?family=Montserrat%7CSorts+Mill+Goudy&#038;ver=1.2' type='text/css' media='all' />
 
 	<!-- Responsive CSS -->
