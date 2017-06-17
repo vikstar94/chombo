@@ -43,7 +43,7 @@
 <!-- other sources -->
 <?php if (!empty($chombo_data)) { ?>
 <script async defer
- src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDBQtfn89NIdpyhBlbx9kCsLVuFrY8GGkg&callback=initMap">
+ src="https://maps.googleapis.com/maps/api/js?key=<?php echo $google_api_key; ?>&callback=initMap">
 </script>
 <?php } ?>
 <script type='text/javascript' src="<?php echo base_url($js . 'scripts.js'); ?>"></script>

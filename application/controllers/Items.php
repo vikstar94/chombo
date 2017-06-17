@@ -18,7 +18,7 @@ class Items extends CI_Controller {
 		
 		$this->data['title'] = 'All Items';
 
-		$this->data['custom_css'] = array('theme.min.css', 'chrome.css', 'items/store.css');
+		$this->data['custom_css'] = array('theme.min.css', 'chrome.css', 'style.csss');
 
 		$this->load->view('templates/header', $this->data);
 		$this->load->view('items/index');

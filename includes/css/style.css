@@ -55,6 +55,7 @@
     - Header Navigation
     - Primary Navigation
     - Secondary Navigation
+    - Sidebar Navigation
     - Responsive Menu
   - Content Area
     - Homepage
@@ -735,6 +736,10 @@ Structure and Layout
 /* Site Containers
 --------------------------------------------- */
 
+.full-screen {
+  min-height: 800px;
+}
+
 .spacer {
   margin-top: 20px;
 }
@@ -1311,6 +1316,36 @@ Site Navigation
 .nav-secondary a {
   margin: 0 20px;
   padding: 0;
+}
+
+/* Sidebar Navigation
+--------------------------------------------- */
+
+.nav.tabs {
+  background-color: #1fae66;
+  border-bottom-right-radius: 20px;
+}
+
+.nav.tabs > li > a {
+  color: white;
+}
+
+.nav.tabs > li a:hover {
+  background-color: #92e5bb;
+  color: #1fae66;
+}
+.nav.tabs > li:last-child a:hover,
+.nav.tabs > li:last-child:hover,
+.nav.tabs > li:last-child a:focus,
+.nav.tabs > li:last-child.active a
+{
+  border-bottom-right-radius: 20px;
+}
+
+.nav.tabs > li > a:focus,
+.nav.tabs > li.active > a
+ {
+  background-color: #006837;
 }
 
 /* Responsive Menu

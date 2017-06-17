@@ -10,10 +10,12 @@ class Chombos extends CI_Controller
 	public function __construct () {
 		parent::__construct();
 		$this->load->model('chombos_model');
+		$this->load->model('vars_model');
 	}
 
 	public function view($chombo_id) {
 		$this->data['chombo_data'] = $this->chombos_model->chombo_data($chombo_id);
+		$this->data['google_api_key'] = $this->vars_model->get_var('google_api_key');
 
 		$this->data['custom_css'] = array('theme.min.css', 'chrome.css');
 		$this->data['custom_plugin_foot'] = array(
@@ -25,7 +27,7 @@ class Chombos extends CI_Controller
 		$this->data['custom_js_foot'] = array('chombos/morris-charts.js', 'chombos/google-maps.js');
 
 		$this->load->view('templates/header', $this->data);
-		$this->load->view('chombos/view_new');
+		$this->load->view('chombos/view_v3');
 		$this->load->view('templates/footer');	
 	}
 }

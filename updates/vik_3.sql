@@ -1,0 +1,1 @@
+INSERT INTO `vars` (`name`, `value`) VALUES ('google_api_key', 'AIzaSyDBQtfn89NIdpyhBlbx9kCsLVuFrY8GGkg');

@@ -92,6 +92,7 @@ class CI_Controller {
 	         'external' => $this->config->item('external'),
 	         'plugin' => $this->config->item('plugins')
 	    );
+	    $this->data['base_url'] = base_url();
 	}
 
 	// --------------------------------------------------------------------

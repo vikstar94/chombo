@@ -109,7 +109,7 @@
 					</div>
 					<div class="panel-body-list pd-25">
 						<h2 class="mgtp--5"> <span class="font-semibold">Position</span></h2>
-						<div id="map"></div>
+						<div id="map" style="width:100%;height:500px;background:yellow"></div>
 					</div>
 				</div>
 			</div>
