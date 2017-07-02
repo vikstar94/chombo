@@ -2640,6 +2640,9 @@ div.tagsinput span.tag a{
 .panel-bd-top{
 	border-top:3px solid #1fae66
 }
+.panel-bd{
+	border:3px solid #1fae66
+}
 .widget .vd_panel-menu .menu .vd_mega-menu-content{
 	margin-top:5px;
 	margin-left:-13px

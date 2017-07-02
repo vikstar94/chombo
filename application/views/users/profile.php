@@ -119,17 +119,17 @@
 															<td class="center"><?php echo $chombo['status']; ?></td>
 															<td class="center"><?php echo $chombo['owner']; ?></td>
 															<td class="menu-action rounded-btn">
-																<a class="btn menu-icon vd_bg-green" data-placement="top" data-toggle="tooltip" data-original-title="view">
+																<a href="<?php echo base_url('index.php/chombos/view/' . $chombo['id']); ?>" class="btn menu-icon vd_bg-green" data-placement="top" data-toggle="tooltip" data-original-title="view">
 																		 <i class="fa fa-eye"></i>
 																	</a>                                      
 																<?php if ($chombo['owner'] == 'You') { ?>
-																<a class="btn menu-icon vd_bg-yellow" data-placement="top" data-toggle="tooltip" data-original-title="edit">
+																<a href="<?php echo base_url('index.php/chombos/edit/' . $chombo['id']); ?>" class="btn menu-icon vd_bg-yellow" data-placement="top" data-toggle="tooltip" data-original-title="edit">
 																		 <i class="fa fa-pencil"></i>
 																	</a>
+																<?php } ?>
 																<a class="btn menu-icon vd_bg-red" data-placement="top" data-toggle="tooltip" data-original-title="delete">
 																		 <i class="fa fa-times"></i>
 																	</a>                 
-																<?php } ?>
 															</td>
 														</tr>
 														<?php } // end of foreach
@@ -190,6 +190,7 @@
 										<!-- orders-tab -->
 										<div id="friends-tab" class="tab-pane">
 											<div class="pd-20">
+												<div class="vd_info tr"><a href="<?php echo base_url('index.php/users/add_chombo'); ?>" class="btn vd_btn btn-xs vd_bg-yellow"> <i class="fa fa-plus append-icon"></i> Add New Friend </a> </div> 
 												<h3 class="mgbt-xs-15 mgtp-10 font-semibold"><i class="fa fa-users mgr-10 profile-icon"></i> FRIENDS</h3>
 												<ul class="nav nav-pills">
 												  <li class="active"><a href="#photos-1" data-toggle="tab">Friends</a></li>

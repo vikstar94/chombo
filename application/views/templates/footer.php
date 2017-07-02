@@ -1,5 +1,41 @@
 
-	<footer class="site-footer" itemscope itemtype="http://schema.org/WPFooter"><div class="wrap"><p>Copyright &#x000A9;&nbsp;2015 &#x000B7; <a href="http://my.studiopress.com/themes/parallax/">Parallax Pro Theme</a> on <a href="http://www.studiopress.com/">Genesis Framework</a> &#x000B7; <a href="http://wordpress.org/">WordPress</a> &#x000B7; <a href="<?php echo base_url('index.php/users/login'); ?>">Log in</a></p></div></footer>
+	<footer class="flex-rw" itemscope itemtype="http://schema.org/WPFooter">
+	  <ul class="footer-list-top">
+	    <li><h4 class="footer-list-header">Find Out More</h4></li>
+	    <li><a href='#' class="generic-anchor footer-list-anchor">The Chombos</a></li>
+	    <li><a href='#' class="generic-anchor footer-list-anchor">Purchase Oprions</a></li>
+	    <li><a href='#' class="generic-anchor footer-list-anchor">Something Else</a></li>
+	    <li><a href='#' class="generic-anchor footer-list-anchor" target="_blank">The Mobile App</a></li>
+	  </ul>
+	  <ul class="footer-list-top">
+	    <li id='help'><h4 class="footer-list-header">Please Help Me</h4></li>
+	    <li><a href='#' class="generic-anchor footer-list-anchor" itemprop="significantLink">CONTACT US</a></li>
+	    <li><a href='#' class="generic-anchor footer-list-anchor" itemprop="significantLink">FAQ</a></li>
+	    <li><a href='#' class="generic-anchor footer-list-anchor" itemprop="significantLink">SUBSCRIBE</a></li>
+	    <li><a href='#' itemprop="significantLink" class="generic-anchor footer-list-anchor">FORUM</a></li>
+	  </ul>
+	  <section class="footer-social-section flex-rw">
+	      <span class="footer-social-overlap footer-social-connect">
+	      CONNECT <span class="footer-social-small">with</span> US
+	      </span>
+	      <span class="footer-social-overlap footer-social-icons-wrapper">
+	      <a href="#" class="generic-anchor" target="_blank" title="Facebook" itemprop="significantLink"><i class="fa fa-facebook"></i></a>
+	      <a href="#" class="generic-anchor" target="_blank" title="Twitter" itemprop="significantLink"><i class="fa fa-twitter"></i></a>
+	      <a href="#" class="generic-anchor" target="_blank" title="Youtube" itemprop="significantLink"><i class="fa fa-youtube"></i></a>
+	      <a href="#" class="generic-anchor" target="_blank" title="Pinterest" itemprop="significantLink"><i class="fa fa-linkedin"></i></a>
+	      </span>
+	  </section>
+	  <section class="footer-bottom-section flex-rw">
+	<div class="footer-bottom-wrapper">   
+	<i class="fa fa-copyright" role="copyright">
+	 
+	</i> 2017 The Chombo Project <address class="footer-address" role="company address">Vallencia, SP</address><span class="footer-bottom-rights"> - All Rights Reserved - </span>
+	    </div>
+	    <div class="footer-bottom-wrapper">
+	    <a href="/terms-of-use.html" class="generic-anchor" rel="nofollow">Terms</a> | <a href="/privacy-policy.html" class="generic-anchor" rel="nofollow">Privacy</a>
+	      </div>
+	  </section>
+	</footer>
 
 
 

@@ -42,6 +42,13 @@ class Users_model extends CI_Model {
 		$this->db->update("users", array('active' => 0));
 	}
 
+	public function logged_in() {
+		if (!empty($user = $_SESSION['user'])) 
+			return $user;
+
+		redirect($_SERVER['HTTP_REFERER']);
+	}
+
 	public function get_profile_data($user_id, $viewer) {
 		$this->db->where('id', $user_id);
 		$query = $this->db->get('users');

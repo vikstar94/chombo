@@ -29,7 +29,7 @@ mozilla/5.0 (Linux; Android 4.4.2, Android SDK built for x86 BUILD/KK) AppleWebK
 
 $useragent = $_SERVER['HTTP_USER_AGENT'];
 if(preg_match('/(android)/i',substr($useragent,0))) {
-	$config['base_url'] = 'http://10.0.2.2/chombo/';
+	$config['base_url'] = 'http://192.168.137.1/chombo/';
 } else
 {
 	$config['base_url'] = 'http://localhost/chombo/';

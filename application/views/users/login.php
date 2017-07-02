@@ -3,7 +3,7 @@
 		<main class="content">
 			<div class="content_panel">
 				<div class="title">Sign In</div>
-				<form  action="http://localhost/chombo/index.php/users/login_do" method="POST" >
+				<form  action="<?php echo base_url() . 'index.php/users/login_do'; ?>" method="POST" >
 				<input type="text" placeholder="Username" name="credentials[username]" />
 				<input type="password" placeholder="Password" name="credentials[password]"/>
 				<input type="checkbox" id="rememberMe" name="credentials[remember]"/>
@@ -16,7 +16,7 @@
 					<button class="twitter"><i class="fa fa-twitter"></i>Twitter</button>
 					<button class="google"><i class="fa fa-google-plus"></i>Google</button>
 				</div>
-				<div class="already">Don't have an account? <a href="http://localhost/chombo/index.php/users/register">Sign Up Now</a></div>
+				<div class="already">Don't have an account? <a href="<?php echo base_url() . 'index.php/users/register'; ?>">Sign Up Now</a></div>
 			</div>
 		</main>
 	</div>
