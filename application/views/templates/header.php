@@ -59,7 +59,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<?php if (!empty($custom_js_head)) foreach ($custom_js_head as $cjsh) { ?>
 		<script type='text/javascript' src='<?php echo base_url($js . $cjsh); ?>'></script>
 	<?php } ?>
-	<style type="text/css">.site-title a { background: url(http://safootballer.com.au/wp-content/uploads/2014/08/your-logo-ehre.png) no-repeat !important; }</style>
+	<style type="text/css">.site-title a { background: url(<?php echo base_url($image . 'chombo_logo.png'); ?>) no-repeat !important;}</style>
 	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script type="text/javascript" src="<?php echo base_url($js . 'html5shiv.js'); ?>"></script>

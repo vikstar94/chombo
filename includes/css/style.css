@@ -1157,7 +1157,8 @@ Site Header
 .header-image .site-title > a {
   background-size: contain !important;
   display: block;
-  height: 63px;
+  margin-top: 7px;
+  height: 50px;
   text-indent: -9999px;
   max-width: 360px;
 }
