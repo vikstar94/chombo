@@ -1,7 +1,12 @@
 <div class="site-inner">
 <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
 <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
-
+	<div class="vd_title-section clearfix">
+		<div class="vd_panel-header">
+	        <h1>Editing Chombo: <span class="font-semibold"><?php echo $chombo_data['name']; ?></h1>
+	        <small class="subtitle">Here you can edit the Chombo's title and description. Also can enable or disable the Chombo if it is necessary. Bellow you can see some other charactristics and options.</small>
+	    </div>
+	</div>
 <!-- <div class="spacer"></div> -->
   <div class="vd_content-section clearfix">
 	<div class="row">
@@ -10,7 +15,7 @@
 		  <div class="panel-heading no-title"> </div>
 		  <form class="form-horizontal" action="#" role="form">
 			<div  class="panel-body">
-			  <h2 class="mgbt-xs-20"> Editing Chombo: <span class="font-semibold"><?php echo $chombo_data['name']; ?></span> </h2>
+			  <h2 class="mgbt-xs-20">General Information</span> </h2>
 			  <br/>
 			  <div class="row">
 				<div class="col-sm-3 mgbt-xs-20">
@@ -22,7 +27,6 @@
 				  </div>
 				</div>
 				<div class="col-sm-9">
-				  <h3 class="mgbt-xs-15">General Information</h3>
 				  <div class="form-group">
 					<label class="col-sm-3 control-label">Title</label>
 					<div class="col-sm-9 controls">

@@ -65,6 +65,9 @@ class Users extends CI_Controller {
 	}
 
 	public function add_chombo() {
+
+		$this->data['custom_css'] = array('theme.min.css', 'chrome.css');
+
 		if (empty($_POST)) {
 			$this->load->view('templates/header', $this->data);
 			$this->load->view('users/add_chombo');

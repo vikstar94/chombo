@@ -435,7 +435,7 @@
 	</div>
 	<!-- col-sm-8 -->
 
-	<div class="col-sm-4 sidebar-affix">
+	<div class="col-sm-4">
 	<div class="panel widget vd_summary-panel">
 	<div class="panel-heading vd_bg-yellow">
 	<h3 class="panel-title"> <span class="menu-icon"> <i class="fa fa-usd"></i> </span> Summary </h3>
