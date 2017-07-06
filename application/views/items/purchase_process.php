@@ -44,7 +44,7 @@
 				<p class="help-inline">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
 				<div class="radio">
 					<label>
-					<input name="sensors[humidity]" value="1" checked="" type="radio">
+					<input name="sensors[humidity]" value="1" type="radio">
 					HS 1.0</label>
 				</div>
 				<div class="radio">
@@ -66,7 +66,7 @@
 				<p class="help-inline">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
 				<div class="radio">
 					<label>
-					<input name="sensors[light]" value="2" checked="" type="radio">
+					<input name="sensors[light]" value="2" type="radio">
 					LS 1.0</label>
 				</div>
 				<div class="radio">
@@ -88,7 +88,7 @@
 				<p class="help-inline">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
 				<div class="radio">
 					<label>
-					<input name="sensors[gps]" value="3" checked="" type="radio">
+					<input name="sensors[gps]" value="3" type="radio">
 					GPS 1.0</label>
 				</div>
 				<div class="radio">
@@ -110,7 +110,7 @@
 				<p class="help-inline">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
 				<div class="radio">
 					<label>
-					<input name="sensors[polution]" value="4" checked="" type="radio">
+					<input name="sensors[polution]" value="4" type="radio">
 					PS 1.0</label>
 				</div>
 				<div class="radio">
@@ -135,17 +135,17 @@
 				<p class="help-inline">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
 				<div class="radio">
 					<label>
-					<input name="sensors[left_wheel]" value="1" checked="" type="radio">
+					<input name="actuators[left_wheel]" value="1" type="radio">
 					Left Wheel 1.0</label>
 				</div>
 				<div class="radio">
 					<label>
-					<input name="sensors[left_wheel]" value="6" type="radio">
+					<input name="actuators[left_wheel]" value="6" type="radio">
 					Left Wheel 2.0</label>
 				</div>
 				<div class="radio">
 					<label>
-					<input name="sensors[left_wheel]" value="11" type="radio">
+					<input name="actuators[left_wheel]" value="11" type="radio">
 					Left Wheel 3.0</label>
 				</div>
 			</div>
@@ -157,17 +157,17 @@
 				<p class="help-inline">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
 				<div class="radio">
 					<label>
-					<input name="sensors[right_wheel]" value="2" checked="" type="radio">
+					<input name="actuators[right_wheel]" value="2" type="radio">
 					Right Wheel 1.0</label>
 				</div>
 				<div class="radio">
 					<label>
-					<input name="sensors[right_wheel]" value="8" type="radio">
+					<input name="actuators[right_wheel]" value="8" type="radio">
 					Right Wheel 2.0</label>
 				</div>
 				<div class="radio">
 					<label>
-					<input name="sensors[right_wheel]" value="12" type="radio">
+					<input name="actuators[right_wheel]" value="12" type="radio">
 					Right Wheel 3.0</label>
 				</div>
 			</div>
@@ -179,17 +179,17 @@
 				<p class="help-inline">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
 				<div class="radio">
 					<label>
-					<input name="sensors[water_tank]" value="3" checked="" type="radio">
+					<input name="actuators[water_tank]" value="3" type="radio">
 					Water Tank 1.0</label>
 				</div>
 				<div class="radio">
 					<label>
-					<input name="sensors[water_tank]" value="9" type="radio">
+					<input name="actuators[water_tank]" value="9" type="radio">
 					Water Tank 2.0</label>
 				</div>
 				<div class="radio">
 					<label>
-					<input name="sensors[water_tank]" value="13" type="radio">
+					<input name="actuators[water_tank]" value="13" type="radio">
 					Water Tank 3.0</label>
 				</div>
 			</div>
@@ -201,17 +201,17 @@
 				<p class="help-inline">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
 				<div class="radio">
 					<label>
-					<input name="sensors[water_pump]" value="4" checked="" type="radio">
+					<input name="actuators[water_pump]" value="4" type="radio">
 					Water Pump 1.0</label>
 				</div>
 				<div class="radio">
 					<label>
-					<input name="sensors[water_pump]" value="10" type="radio">
+					<input name="actuators[water_pump]" value="10" type="radio">
 					Water Pump 2.0</label>
 				</div>
 				<div class="radio">
 					<label>
-					<input name="sensors[water_pump]" value="14" type="radio">
+					<input name="actuators[water_pump]" value="14" type="radio">
 					Water Pump 3.0</label>
 				</div>
 			</div>
@@ -223,17 +223,17 @@
 				<p class="help-inline">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
 				<div class="radio">
 					<label>
-					<input name="sensors[led_lamp]" value="5" checked="" type="radio">
+					<input name="actuators[led_lamp]" value="5" type="radio">
 					LED Lamp 1.0</label>
 				</div>
 				<div class="radio">
 					<label>
-					<input name="sensors[led_lamp]" value="11" type="radio">
+					<input name="actuators[led_lamp]" value="11" type="radio">
 					LED Lamp 2.0</label>
 				</div>
 				<div class="radio">
 					<label>
-					<input name="sensors[led_lamp]" value="15" type="radio">
+					<input name="actuators[led_lamp]" value="15" type="radio">
 					LED Lamp 3.0</label>
 				</div>
 			</div>
@@ -248,7 +248,7 @@
 				<p class="help-inline">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
 				<div class="radio">
 					<label>
-					<input name="optionsRadios11" id="optionsRadios45" value="option1" checked="" type="radio">
+					<input name="optionsRadios11" id="optionsRadios45" value="option1" type="radio">
 						White </label>
 				</div>
 				<div class="radio">
@@ -286,7 +286,7 @@
 				<p class="help-inline">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
 				<div class="radio">
 					<label>
-					<input name="optionsRadios12" id="optionsRadios45" value="option1" checked="" type="radio">
+					<input name="optionsRadios12" id="optionsRadios45" value="option1" type="radio">
 						Front Lights Only </label>
 				</div>
 				<div class="radio">
@@ -323,7 +323,7 @@
 				<p class="help-inline">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
 				<div class="radio">
 					<label>
-					<input name="optionsRadios13" id="optionsRadios45" value="option1" checked="" type="radio">
+					<input name="optionsRadios13" id="optionsRadios45" value="option1" type="radio">
 						2 Small at front </label>
 				</div>
 				<div class="radio">
