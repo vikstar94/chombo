@@ -6,7 +6,7 @@
 	    </div>
 	</div>
 	<div class="vd_content-section clearfix">
-		<form class="form-horizontal" action="#" role="form">
+		<form class="form-horizontal" action="<?php echo base_url('index.php/users/add_chombo'); ?>" role="form" method="POST">
 			<div class="row">
 				<div class="col-md-10">
 					<input type="text" name="code" placeholder="Code" />
