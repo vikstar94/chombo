@@ -5,52 +5,73 @@ jQuery(document).ready(function(){
 	Morris.Line({
 	  element: 'humidity-placeholder-1',
 	  data: [
-		{ y: '2006', a: 10,  },
-		{ y: '2007', a: 55,   },
-		{ y: '2008', a: 30,   },
-		{ y: '2009', a: 65,  },
-		{ y: '2010', a: 40,  },
-		{ y: '2011', a: 20,   },
-		{ y: '2012', a: 80, }
+		{ hour: '00:00', a: 30,  },
+		{ hour: '02:00', a: 60,   },
+		{ hour: '04:00', a: 50,   },
+		{ hour: '06:00', a: 45,  },
+		{ hour: '08:00', a: 40,  },
+		{ hour: '10:00', a: 20,   },
+		{ hour: '12:00', a: 80, },
+		{ hour: '14:00', a: 75, },
+		{ hour: '16:00', a: 60, },
+		{ hour: '18:00', a: 50, },
+		{ hour: '20:00', a: 30, },
+		{ hour: '22:00', a: 75, },
+		{ hour: '24:00', a: 60, }
 	  ],
-	  xkey: 'y',
+	  xkey: 'hour',
 	  ykeys: ['a', ],
-	  labels: ['Series A', ],
-	  lineColors: ['#F85D2C']
+	  labels: ['Humidity Level', ],
+	  lineColors: ['#4286f4'],
+	  parseTime: false
 	});
 
 	Morris.Line({
 	  element: 'humidity-placeholder-2',
 	  data: [
-		{ y: '2006', a: 15,  },
-		{ y: '2007', a: 55,   },
-		{ y: '2008', a: 50,   },
-		{ y: '2009', a: 60,  },
-		{ y: '2010', a: 50,  },
-		{ y: '2011', a: 80,   },
-		{ y: '2012', a: 60, }
+		{ hour: '00:00', a: 10,  },
+		{ hour: '02:00', a: 10,   },
+		{ hour: '04:00', a: 15,   },
+		{ hour: '06:00', a: 50,  },
+		{ hour: '08:00', a: 55,  },
+		{ hour: '10:00', a: 80,   },
+		{ hour: '12:00', a: 83, },
+		{ hour: '14:00', a: 75, },
+		{ hour: '16:00', a: 60, },
+		{ hour: '18:00', a: 55, },
+		{ hour: '20:00', a: 40, },
+		{ hour: '22:00', a: 30, },
+		{ hour: '24:00', a: 10, }
 	  ],
-	  xkey: 'y',
+	  xkey: 'hour',
 	  ykeys: ['a', ],
-	  labels: ['Series A', ],
-	  lineColors: ['#F85D2C']
+	  labels: ['Light Level', ],
+	  lineColors: ['#f7bd20'],
+	  parseTime: false
 	});
 
 	Morris.Line({
 	  element: 'humidity-placeholder-3',
 	  data: [
-		{ y: '2006', a: 15,  },
-		{ y: '2007', a: 55,   },
-		{ y: '2008', a: 35,   },
-		{ y: '2009', a: 65,  },
-		{ y: '2010', a: 50,  },
-		{ y: '2011', a: 60,   },
-		{ y: '2012', a: 100, }
+		{ hour: '00:00', a: 60,  },
+		{ hour: '02:00', a: 65,   },
+		{ hour: '04:00', a: 65,   },
+		{ hour: '06:00', a: 55,  },
+		{ hour: '08:00', a: 50,  },
+		{ hour: '10:00', a: 40,   },
+		{ hour: '12:00', a: 45, },
+		{ hour: '14:00', a: 40, },
+		{ hour: '16:00', a: 30, },
+		{ hour: '18:00', a: 50, },
+		{ hour: '20:00', a: 60, },
+		{ hour: '22:00', a: 40, },
+		{ hour: '24:00', a: 55, }
 	  ],
-	  xkey: 'y',
+	  xkey: 'hour',
 	  ykeys: ['a', ],
-	  labels: ['Series A', ],
-	  lineColors: ['#F85D2C']
+	  labels: ['Polution Level', ],
+	  lineColors: ['#76f441'],
+	  parseTime: false
 	});
 
 });
