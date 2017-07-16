@@ -37,7 +37,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 								<div class="content-list content-blog-large">
 									<ul class="list-wrapper">
 										<li>
-											<div class="menu-icon"> <img alt="example image" src="<?php echo base_url($image). '/Chombo.jpg'; ?>"> </div>
+											<div class="menu-icon"> <img alt="example image" src="<?php echo base_url($image). '/blog/02.jpg'; ?>"> </div>
 											<div class="menu-text">
 											<h2 class="blog-title font-bold letter-xs"><a href="#"> Part 1 </a></h2>
 											<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas odio eros, imperdiet vel lorem ut, ullamcorper finibus nibh. Integer ullamcorper consectetur nibh at laoreet. Praesent posuere tincidunt congue. Maecenas tortor risus, pulvinar pulvinar eros nec, luctus accumsan odio. Nam vel tincidunt metus. Vivamus blandit mi non leo volutpat, quis fringilla diam accumsan. Donec nec mi dui.</p>
@@ -47,15 +47,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 										<li>
 											<div class="menu-icon"> <img alt="example image" src="<?php echo base_url($image). '/blog/02.jpg'; ?>"> </div>
 											<div class="menu-text">
-											<h2 class="blog-title font-bold letter-xs"><a href="#"> part 2 </a></h2>
+											<h2 class="blog-title font-bold letter-xs"><a href="#"> Part 2 </a></h2>
 											<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas odio eros, imperdiet vel lorem ut, ullamcorper finibus nibh. Integer ullamcorper consectetur nibh at laoreet. Praesent posuere tincidunt congue. Maecenas tortor risus, pulvinar pulvinar eros nec, luctus accumsan odio. Nam vel tincidunt metus. Vivamus blandit mi non leo volutpat, quis fringilla diam accumsan. Donec nec mi dui.</p>
 											<p>Sed ultrices purus nec placerat tempor. Donec convallis augue eu ornare dapibus. Donec vitae purus id sem gravida elementum. Maecenas sit amet nunc arcu. Duis laoreet erat id turpis hendrerit, eget mollis enim bibendum. Morbi ut pulvinar diam. Etiam eu sollicitudin metus. ...</p>
 											<a class="btn vd_btn vd_bg-green btn-sm" href="#">Read More</a> </div>
 										</li>
 										<li>
-											<div class="menu-icon"> <img alt="example image" src="<?php echo base_url($image). '/blog/03.jpg'; ?>"> </div>
+											<div class="menu-icon"> <img alt="example image" src="<?php echo base_url($image). '/blog/02.jpg'; ?>"> </div>
 											<div class="menu-text">
-											<h2 class="blog-title font-bold letter-xs"><a href="#"> Large Chombo </a></h2>
+											<h2 class="blog-title font-bold letter-xs"><a href="#"> Part 3 </a></h2>
 											<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas odio eros, imperdiet vel lorem ut, ullamcorper finibus nibh. Integer ullamcorper consectetur nibh at laoreet. Praesent posuere tincidunt congue. Maecenas tortor risus, pulvinar pulvinar eros nec, luctus accumsan odio. Nam vel tincidunt metus. Vivamus blandit mi non leo volutpat, quis fringilla diam accumsan. Donec nec mi dui.</p>
 											<p>Sed ultrices purus nec placerat tempor. Donec convallis augue eu ornare dapibus. Donec vitae purus id sem gravida elementum. Maecenas sit amet nunc arcu. Duis laoreet erat id turpis hendrerit, eget mollis enim bibendum. Morbi ut pulvinar diam. Etiam eu sollicitudin metus. ...</p>
 											<a class="btn vd_btn vd_bg-green btn-sm" href="#">Read More</a> </div>

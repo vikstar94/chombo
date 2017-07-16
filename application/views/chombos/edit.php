@@ -152,6 +152,7 @@
 							</div>
 							<hr class="pd-10"  />
 							<a href="<?php echo base_url('index.php/chombos/permissions/' . $chombo_data['id']); ?>" class="btn vd_btn vd_bg-green">Permissions</a>
+							<a href="#" class="btn vd_btn vd_bg-red">Remove</a>
 						</div>
 					</div>
 				</div>

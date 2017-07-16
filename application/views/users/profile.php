@@ -217,7 +217,7 @@
 																	</span>
 																</span> 
 															 </li>
-															<li class="warning"> 
+															<li> 
 																	<a href="#"> 
 																		<span class="menu-icon"><img src="<?php echo base_url($image . 'avatar/placeholder.jpg'); ?>" alt="example image"></span>  
 																	</a>                            
